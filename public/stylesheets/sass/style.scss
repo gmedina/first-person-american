@@ -1,5 +1,26 @@
 @import "compass/reset";
+
+//colors
+$body-color: #020202;
+$header-color: #1583AB;
+
+
+
 body {
-	background: #f00;
-	color: #b4d455;
+	color: $body-color;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 14px;
 }
+
+header, 
+h1, 
+h2,
+h3, 
+h4, 
+h5, 
+h6 {
+	color: $header-color;
+	font-family: 'Rokkitt',serif;
+    font-weight: bold;
+}
+

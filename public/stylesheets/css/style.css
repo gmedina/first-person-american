@@ -63,8 +63,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 2, ../sass/style.scss */
+/* line 9, ../sass/style.scss */
 body {
-  background: #f00;
-  color: #b4d455;
+  color: #020202;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+}
+
+/* line 21, ../sass/style.scss */
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1583ab;
+  font-family: 'Rokkitt',serif;
+  font-weight: bold;
 }
