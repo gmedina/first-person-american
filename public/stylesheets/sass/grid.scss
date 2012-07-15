@@ -1,0 +1,19 @@
+//lets change the box model to what makes sense :)
+* {
+    @include box-sizing;
+}
+//grid system
+$col-size: 30px;
+$col-gutter: 5px;
+
+@mixin col($cols) {
+    width: ($cols * $col-size) + (2 * $col-gutter * $cols);
+    padding: 0 $col-gutter;
+    float: left;
+}
+@mixin col-first {
+    padding-left: 0;
+}
+@mixin col-last {
+    padding-right: 0;
+}

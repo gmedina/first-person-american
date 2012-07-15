@@ -1,0 +1,18 @@
+@mixin clearfix {
+    zoom: 1;
+    &:after,
+    &:before {
+       content: " ";
+       display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin box-sizing ($box-sizing: border-box){
+    -moz-box-sizing:    $box-sizing;
+    -webkit-box-sizing: $box-sizing;
+    -ms-box-sizing:     $box-sizing;
+     box-sizing:        $box-sizing;
+}
