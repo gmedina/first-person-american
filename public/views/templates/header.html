@@ -1,4 +1,4 @@
-<script id="tmp-header" type="text/template">
+<script id="tmp-header" type="text/x-mustache-tmpl">
 	<header role="main">
 		<hgroup>
 			<ul>
@@ -8,15 +8,20 @@
 			</ul>
 		</hgroup>
 		<hgroup>
-			<h1><a href=""><img src="../images/logo.png" alt="First Person American. What's your story" width="458" height="68"/></a></h1>
-			<nav>
+			<div class="logo">
+				<a href="">
+					<img src="../images/logo.png" alt="First Person American" width="458" height="68"/>
+				</a>
+				<span class="tagline">What's your story?</span>
+			</div>
+			<nav role="main">
 				<ul>
 					<li><a href="">Stories <span>Videos & Interviews</span></a></li>
 					<li><a href="">Be a First Person <span>How to Participate</span></a></li>
 					<li><a href="">Top 5's <span>Cultural Tips & Picks</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Programs</a></li>
-					<li><a href="">Blog</a></log>
+					<li class="nav-offset about"><a href="">About</a></li>
+					<li class="nav-offset programs"><a href="">Programs</a></li>
+					<li class="nav-offset blog"><a href="">Blog</a></log>
 				</ul>
 			</nav>
 		</hgroup>

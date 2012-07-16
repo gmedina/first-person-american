@@ -1,0 +1,103 @@
+header[role = "main"] {
+    @include col($cols: 24);
+    @include col-first;
+    @include col-last;
+    
+    hgroup + hgroup {
+        @include clearfix;
+        border-top: 1px dotted #ccc;
+        &:after {
+            position: relative;
+            top: -5px;
+            display: block;
+            z-index: -1;
+            content: " ";
+            background: url(../../images/bg-stripe-grey.png) top left repeat;
+            height: 10px;
+        }
+    }
+    
+    .logo {
+        float: left;
+        position: relative;
+        margin-top: 14px;
+        a {
+            img {
+                width: 458px;
+                height: 68px;
+                border: 0;
+                display: block;
+            }
+        }
+        .tagline {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            padding: 0 5px;
+            background: #fff;
+            font-family: $header-font;
+            font-size: 18px;
+            color: $header-color-secondary;
+            text-transform: uppercase;
+        }
+    }
+    
+    nav[role = "main"] {
+        float: right;
+        width: 492px;
+        margin-left: 10px;
+        ul {
+            @include clearfix;
+            position: relative;
+            font-family: $nav-font;            
+            li {
+                float: left;
+                &:first-child a {
+                    color: $header-color;
+                    span {
+                        color: $body-color;
+                    }
+                }
+                &.nav-offset {
+                    position: absolute;
+                    right: 0;
+                    a {
+                        height: 26px;
+                        width: 80px;
+                        border-bottom: 1px solid #ccc;
+                        padding: 0 0 0 7px;
+                        font-size: 22px;
+                    }
+                }
+                &.about {
+                    top: 0px;
+                }
+                &.programs {
+                    top: 26px;
+                }
+                &.blog {
+                    top: 52px;
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    height: 78px;
+                    padding: 27px 6px 0;
+                    border-left: 1px solid #ccc;
+                    font-size: 30px;
+                    color: $body-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    span {
+                        display: block;
+                        font-size: 11px;
+                        font-family: $body-font;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+}

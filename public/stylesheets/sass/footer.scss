@@ -1,0 +1,5 @@
+footer[role = "main"] {
+    @include col($cols: 24);
+    @include col-first;
+    @include col-last;
+}

@@ -2,9 +2,19 @@
  * mustache.js - Logic-less {{mustache}} templates with JavaScript
  * http://github.com/janl/mustache.js
  */
-var Mustache = (typeof module !== "undefined" && module.exports) || {};
+
+var Mustache;
 
 (function (exports) {
+  if (typeof module !== "undefined") {
+    module.exports = exports; // CommonJS
+  } else if (typeof define === "function") {
+    define(exports); // AMD
+  } else {
+    Mustache = exports; // <script>
+  }
+}(function () {
+  var exports = {};
 
   exports.name = "mustache.js";
   exports.version = "0.5.1-dev";
@@ -52,7 +62,7 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
     return Object.prototype.toString.call(obj) === "[object Array]";
   };
 
-  // OSWASP Guidlines: escape all non alphanumeric characters in ASCII space.
+  // OSWASP Guidelines: escape all non alphanumeric characters in ASCII space.
   var jsCharsRe = /[\x00-\x2F\x3A-\x40\x5B-\x60\x7B-\xFF\u2028\u2029]/gm;
 
   function quote(text) {
@@ -64,7 +74,7 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
   }
 
   function escapeRe(string) {
-    return string.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+    return string.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
   }
 
   var entityMap = {
@@ -212,6 +222,10 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
   };
 
   Renderer.prototype.compile = function (tokens, tags) {
+    if (typeof tokens === "string") {
+      tokens = parse(tokens, tags);
+    }
+
     var fn = compileTokens(tokens),
         self = this;
 
@@ -243,21 +257,25 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
     case "object":
       if (isArray(value)) {
         var buffer = "";
+
         for (var i = 0, len = value.length; i < len; ++i) {
           buffer += callback(context.push(value[i]), this);
         }
+
         return buffer;
-      } else {
-        return callback(context.push(value), this);
       }
-      break;
+
+      return value ? callback(context.push(value), this) : "";
     case "function":
-      var sectionText = callback(context, this), self = this;
+      // TODO: The text should be passed to the callback plain, not rendered.
+      var sectionText = callback(context, this),
+          self = this;
+
       var scopedRender = function (template) {
         return self.render(template, context);
       };
+
       return value.call(context.view, sectionText, scopedRender) || "";
-      break;
     default:
       if (value) {
         return callback(context, this);
@@ -313,10 +331,6 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
    * `returnBody` is true.
    */
   function compileTokens(tokens, returnBody) {
-    if (typeof tokens === "string") {
-      tokens = parse(tokens);
-    }
-
     var body = ['""'];
     var token, method, escape;
 
@@ -452,8 +466,8 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
    */
   function parse(template, tags) {
     tags = tags || exports.tags;
-    var tagRes = escapeTags(tags);
 
+    var tagRes = escapeTags(tags);
     var scanner = new Scanner(template);
 
     var tokens = [],      // Buffer to hold the tokens
@@ -483,7 +497,7 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
 
       if (value) {
         for (var i = 0, len = value.length; i < len; ++i) {
-          chr = value[i];
+          chr = value.charAt(i);
 
           if (isWhitespace(chr)) {
             spaces.push(tokens.length);
@@ -549,7 +563,7 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
 
   // The high-level clearCache, compile, compilePartial, and render functions
   // use this default renderer.
-  var _renderer = new Renderer;
+  var _renderer = new Renderer();
 
   /**
    * Clears all cached templates and partials.
@@ -594,4 +608,6 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
     return _renderer.render(template, view);
   }
 
-})(Mustache);
+  return exports;
+
+}()));

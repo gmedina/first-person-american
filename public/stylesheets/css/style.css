@@ -71,16 +71,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-/* line 13, ../sass/style.scss */
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("../../fonts/bebasneue-webfont.eot");
+  src: url("../../fonts/bebasneue-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/bebasneue-webfont.woff") format("woff"), url("../../fonts/bebasneue-webfont.ttf") format("truetype"), url("../../fonts/bebasneue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 30, ../sass/style.scss */
 body {
   width: 960px;
   margin: 0 auto;
   color: #020202;
-  font-family: 'Open Sans',sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 h1,
 h2,
 h3,
@@ -88,11 +96,11 @@ h4,
 h5,
 h6 {
   color: #1583ab;
-  font-family: 'Rokkitt',serif;
+  font-family: "Rokkitt", serif;
   font-weight: bold;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 1, ../sass/header.scss */
 header[role="main"] {
   width: 960px;
   padding: 0 5px;
@@ -100,24 +108,146 @@ header[role="main"] {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 37, ../sass/style.scss */
+/* line 6, ../sass/header.scss */
 header[role="main"] hgroup + hgroup {
+  zoom: 1;
   border-top: 1px dotted #ccc;
 }
-/* line 41, ../sass/style.scss */
-header[role="main"] h1 {
-  margin-top: 14px;
-  display: inline-block;
+/* line 4, ../sass/common-mixins.scss */
+header[role="main"] hgroup + hgroup:after, header[role="main"] hgroup + hgroup:before {
+  content: " ";
+  display: table;
 }
-/* line 45, ../sass/style.scss */
-header[role="main"] h1 a img {
+/* line 8, ../sass/common-mixins.scss */
+header[role="main"] hgroup + hgroup:after {
+  clear: both;
+}
+/* line 9, ../sass/header.scss */
+header[role="main"] hgroup + hgroup:after {
+  position: relative;
+  top: -5px;
+  display: block;
+  z-index: -1;
+  content: " ";
+  background: url(../../images/bg-stripe-grey.png) top left repeat;
+  height: 10px;
+}
+/* line 20, ../sass/header.scss */
+header[role="main"] .logo {
+  float: left;
+  position: relative;
+  margin-top: 14px;
+}
+/* line 25, ../sass/header.scss */
+header[role="main"] .logo a img {
   width: 458px;
   height: 68px;
   border: 0;
   display: block;
 }
+/* line 32, ../sass/header.scss */
+header[role="main"] .logo .tagline {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  padding: 0 5px;
+  background: #fff;
+  font-family: "Rokkitt", serif;
+  font-size: 18px;
+  color: #e33237;
+  text-transform: uppercase;
+}
+/* line 45, ../sass/header.scss */
+header[role="main"] nav[role="main"] {
+  float: right;
+  width: 492px;
+  margin-left: 10px;
+}
+/* line 49, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul {
+  zoom: 1;
+  position: relative;
+  font-family: "BebasNeueRegular", sans-serif, serif, Helvetica;
+}
+/* line 4, ../sass/common-mixins.scss */
+header[role="main"] nav[role="main"] ul:after, header[role="main"] nav[role="main"] ul:before {
+  content: " ";
+  display: table;
+}
+/* line 8, ../sass/common-mixins.scss */
+header[role="main"] nav[role="main"] ul:after {
+  clear: both;
+}
+/* line 53, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li {
+  float: left;
+}
+/* line 55, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li:first-child a {
+  color: #1583ab;
+}
+/* line 57, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li:first-child a span {
+  color: #020202;
+}
+/* line 61, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.nav-offset {
+  position: absolute;
+  right: 0;
+}
+/* line 64, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.nav-offset a {
+  height: 26px;
+  width: 80px;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 0 7px;
+  font-size: 22px;
+}
+/* line 72, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.about {
+  top: 0px;
+}
+/* line 75, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.programs {
+  top: 26px;
+}
+/* line 78, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.blog {
+  top: 52px;
+}
+/* line 80, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li.blog a {
+  border-bottom: 0;
+}
+/* line 84, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li a {
+  display: block;
+  height: 78px;
+  padding: 27px 6px 0;
+  border-left: 1px solid #ccc;
+  font-size: 30px;
+  color: #020202;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 93, ../sass/header.scss */
+header[role="main"] nav[role="main"] ul li a span {
+  display: block;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: none;
+}
 
-/* line 55, ../sass/style.scss */
+/* line 1, ../sass/footer.scss */
+footer[role="main"] {
+  width: 960px;
+  padding: 0 5px;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 52, ../sass/style.scss */
 #main {
   zoom: 1;
 }
@@ -130,27 +260,18 @@ header[role="main"] h1 a img {
 #main:after {
   clear: both;
 }
-/* line 57, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 #main .content {
   width: 640px;
   padding: 0 5px;
   float: left;
   padding-left: 0;
 }
-/* line 62, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 #main .side-content {
   width: 320px;
   padding: 0 5px;
   float: left;
   padding-right: 0;
   padding-left: 20px;
-}
-
-/* line 69, ../sass/style.scss */
-footer[role="main"] {
-  width: 960px;
-  padding: 0 5px;
-  float: left;
-  padding-left: 0;
-  padding-right: 0;
 }
