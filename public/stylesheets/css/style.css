@@ -79,7 +79,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 body {
   width: 960px;
   margin: 0 auto;
@@ -88,7 +88,7 @@ body {
   font-size: 14px;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 h1,
 h2,
 h3,
@@ -100,6 +100,32 @@ h6 {
   font-weight: bold;
 }
 
+/* line 53, ../sass/style.scss */
+a {
+  color: #1583ab;
+  text-decoration: none;
+}
+/* line 56, ../sass/style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 63, ../sass/style.scss */
+input[type="password"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 8px;
+}
+/* line 68, ../sass/style.scss */
+input[type="password"].placeholder,
+input[type="text"].placeholder,
+textarea.placeholder {
+  color: #aaa;
+}
+
 /* line 1, ../sass/header.scss */
 header[role="main"] {
   width: 960px;
@@ -109,9 +135,51 @@ header[role="main"] {
   padding-right: 0;
 }
 /* line 6, ../sass/header.scss */
+header[role="main"] a {
+  color: #020202;
+}
+/* line 10, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] {
+  zoom: 1;
+  padding: 7px 0;
+}
+/* line 4, ../sass/common-mixins.scss */
+header[role="main"] nav[role="toolbar"]:after, header[role="main"] nav[role="toolbar"]:before {
+  content: " ";
+  display: table;
+}
+/* line 8, ../sass/common-mixins.scss */
+header[role="main"] nav[role="toolbar"]:after {
+  clear: both;
+}
+/* line 13, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] ul {
+  float: right;
+}
+/* line 15, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] ul li {
+  float: left;
+  font-family: "Rokkitt", serif;
+  font-size: 13px;
+}
+/* line 19, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] ul li:after {
+  content: "|";
+  padding-left: 10px;
+  margin-right: 10px;
+}
+/* line 25, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] ul li:last-child:after {
+  content: none;
+}
+/* line 28, ../sass/header.scss */
+header[role="main"] nav[role="toolbar"] ul li:last-child a {
+  color: #e33237;
+}
+/* line 38, ../sass/header.scss */
 header[role="main"] hgroup + hgroup {
   zoom: 1;
-  border-top: 1px dotted #ccc;
+  border-top: 1px dotted #cccccc;
 }
 /* line 4, ../sass/common-mixins.scss */
 header[role="main"] hgroup + hgroup:after, header[role="main"] hgroup + hgroup:before {
@@ -122,7 +190,7 @@ header[role="main"] hgroup + hgroup:after, header[role="main"] hgroup + hgroup:b
 header[role="main"] hgroup + hgroup:after {
   clear: both;
 }
-/* line 9, ../sass/header.scss */
+/* line 41, ../sass/header.scss */
 header[role="main"] hgroup + hgroup:after {
   position: relative;
   top: -5px;
@@ -132,20 +200,20 @@ header[role="main"] hgroup + hgroup:after {
   background: url(../../images/bg-stripe-grey.png) top left repeat;
   height: 10px;
 }
-/* line 20, ../sass/header.scss */
+/* line 52, ../sass/header.scss */
 header[role="main"] .logo {
   float: left;
   position: relative;
   margin-top: 14px;
 }
-/* line 25, ../sass/header.scss */
+/* line 57, ../sass/header.scss */
 header[role="main"] .logo a img {
   width: 458px;
   height: 68px;
   border: 0;
   display: block;
 }
-/* line 32, ../sass/header.scss */
+/* line 64, ../sass/header.scss */
 header[role="main"] .logo .tagline {
   position: absolute;
   bottom: -10px;
@@ -157,84 +225,84 @@ header[role="main"] .logo .tagline {
   color: #e33237;
   text-transform: uppercase;
 }
-/* line 45, ../sass/header.scss */
-header[role="main"] nav[role="main"] {
+/* line 77, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] {
   float: right;
   width: 492px;
   margin-left: 10px;
 }
-/* line 49, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul {
+/* line 81, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul {
   zoom: 1;
   position: relative;
   font-family: "BebasNeueRegular", sans-serif, serif, Helvetica;
 }
 /* line 4, ../sass/common-mixins.scss */
-header[role="main"] nav[role="main"] ul:after, header[role="main"] nav[role="main"] ul:before {
+header[role="main"] nav[role="navigation"] ul:after, header[role="main"] nav[role="navigation"] ul:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-header[role="main"] nav[role="main"] ul:after {
+header[role="main"] nav[role="navigation"] ul:after {
   clear: both;
 }
-/* line 53, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li {
+/* line 85, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li {
   float: left;
 }
-/* line 55, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li:first-child a {
+/* line 87, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li:first-child a {
   color: #1583ab;
 }
-/* line 57, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li:first-child a span {
+/* line 89, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li:first-child a span {
   color: #020202;
 }
-/* line 61, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.nav-offset {
+/* line 93, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.nav-offset {
   position: absolute;
   right: 0;
 }
-/* line 64, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.nav-offset a {
+/* line 96, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.nav-offset a {
   height: 26px;
   width: 80px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   padding: 0 0 0 7px;
   font-size: 22px;
+  line-height: 26px;
 }
-/* line 72, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.about {
+/* line 105, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.about {
   top: 0px;
 }
-/* line 75, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.programs {
+/* line 108, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.programs {
   top: 26px;
 }
-/* line 78, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.blog {
+/* line 111, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.blog {
   top: 52px;
 }
-/* line 80, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li.blog a {
+/* line 113, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li.blog a {
   border-bottom: 0;
 }
-/* line 84, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li a {
+/* line 117, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li a {
   display: block;
   height: 78px;
   padding: 27px 6px 0;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #cccccc;
   font-size: 30px;
-  color: #020202;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
-/* line 93, ../sass/header.scss */
-header[role="main"] nav[role="main"] ul li a span {
+/* line 125, ../sass/header.scss */
+header[role="main"] nav[role="navigation"] ul li a span {
   display: block;
   font-size: 11px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rokkitt", serif;
   text-transform: none;
 }
 
@@ -245,9 +313,82 @@ footer[role="main"] {
   float: left;
   padding-left: 0;
   padding-right: 0;
+  border-top: 1px dotted #cccccc;
+  margin-top: 25px;
+  font-size: 11px;
+}
+/* line 9, ../sass/footer.scss */
+footer[role="main"] section {
+  width: 240px;
+  padding: 0 5px;
+  float: left;
+  height: 155px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #cccccc;
+  line-height: 15px;
+}
+/* line 17, ../sass/footer.scss */
+footer[role="main"] section:first-child {
+  padding-left: 0;
+}
+/* line 20, ../sass/footer.scss */
+footer[role="main"] section:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+/* line 25, ../sass/footer.scss */
+footer[role="main"] section.copyright p {
+  width: 190px;
+  color: #6e6e6e;
+}
+/* line 31, ../sass/footer.scss */
+footer[role="main"] section.sitemap ul {
+  zoom: 1;
+}
+/* line 4, ../sass/common-mixins.scss */
+footer[role="main"] section.sitemap ul:after, footer[role="main"] section.sitemap ul:before {
+  content: " ";
+  display: table;
+}
+/* line 8, ../sass/common-mixins.scss */
+footer[role="main"] section.sitemap ul:after {
+  clear: both;
+}
+/* line 33, ../sass/footer.scss */
+footer[role="main"] section.sitemap ul li {
+  float: left;
+  clear: left;
+  width: 100px;
+}
+/* line 38, ../sass/footer.scss */
+footer[role="main"] section.sitemap ul .right {
+  float: right;
+  clear: right;
+}
+/* line 45, ../sass/footer.scss */
+footer[role="main"] section.subscribe label {
+  display: none;
+}
+/* line 48, ../sass/footer.scss */
+footer[role="main"] section.subscribe input {
+  display: block;
+}
+/* line 50, ../sass/footer.scss */
+footer[role="main"] section.subscribe input[type="text"] {
+  font-size: 11px;
+}
+/* line 55, ../sass/footer.scss */
+footer[role="main"] section h6 {
+  margin-bottom: 10px;
+  color: #020202;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 #main {
   zoom: 1;
 }
@@ -260,14 +401,14 @@ footer[role="main"] {
 #main:after {
   clear: both;
 }
-/* line 54, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 #main .content {
   width: 640px;
   padding: 0 5px;
   float: left;
   padding-left: 0;
 }
-/* line 59, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 #main .side-content {
   width: 320px;
   padding: 0 5px;

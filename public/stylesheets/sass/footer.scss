@@ -2,4 +2,62 @@ footer[role = "main"] {
     @include col($cols: 24);
     @include col-first;
     @include col-last;
+    border-top: 1px dotted $border-color;
+    margin-top: 25px;
+    font-size: 11px;
+
+    section {
+    	@include col($cols: 6);
+    	height: 155px;
+    	padding-top: 15px;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	border-right: 1px solid $border-color;
+    	line-height: 15px;
+    	&:first-child {
+    		@include col-first;
+    	}
+    	&:last-child {
+    		@include col-last;
+    		border-right: 0;
+    	}
+    	&.copyright {
+    		p {
+    			width: 190px;
+    			color: $body-secondary;
+    		}
+    	}
+    	&.sitemap {
+    		ul {
+    			@include clearfix;
+    			li {
+    				float: left;
+    				clear: left;
+    				width: 100px;
+    			}
+    			.right {
+    				float: right;
+    				clear: right;
+    			}
+    		}
+    	}
+    	&.subscribe {
+    		label {
+    			display: none;
+    		}
+    		input {
+    			display: block;
+    			&[type = "text"] {
+    				font-size: 11px;
+    			}
+    		}
+    	}
+    	h6 {
+    		margin-bottom: 10px;
+    		color: $body-color;
+    		font-size: 14px;
+    		text-transform: uppercase;
+    		font-weight: normal;
+    	}
+    }
 }

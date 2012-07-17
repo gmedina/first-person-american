@@ -37,4 +37,8 @@ $(document).ready(function() {
 	for (var i = 0, l = templates.length; i < l; i++) {
 		loadTemplate(templates[i]);
 	}
+
+	setTimeout(function() {
+		$('input, textarea').placeholder();
+	}, 1000);
 });

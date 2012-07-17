@@ -16,10 +16,14 @@
 //site dimensions
 $site-width: 960px;
 
-//colors
+//font-colors
 $body-color: #020202;
+$body-secondary: #6e6e6e;
 $header-color: #1583AB;
 $header-color-secondary: #e33237;
+
+//borders
+$border-color: #ccc;
 
 //font
 $body-font: 'Open Sans',sans-serif;
@@ -44,6 +48,26 @@ h6 {
 	color: $header-color;
 	font-family: $header-font;
     font-weight: bold;
+}
+
+a {
+    color: $header-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+input[type = "password"],
+input[type = "text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid $border-color;
+    margin-bottom: 8px;
+    &.placeholder {
+        color: #aaa;
+    }
 }
 
 @import "header",

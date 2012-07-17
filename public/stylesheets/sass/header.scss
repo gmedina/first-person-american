@@ -2,10 +2,42 @@ header[role = "main"] {
     @include col($cols: 24);
     @include col-first;
     @include col-last;
+
+    a {
+        color: $body-color;
+    }
+
+    nav[role = "toolbar"] {
+        @include clearfix;
+        padding: 7px 0;
+        ul {
+            float: right;
+            li {
+                float: left;
+                font-family: $header-font;
+                font-size: 13px;
+                &:after {
+                    content: "|";
+                    padding-left: 10px;
+                    margin-right: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        content: none;    
+                    }
+                    a {
+                        color: $header-color-secondary;
+                    }
+                }
+                a {
+                }
+            }
+        }
+    }
     
     hgroup + hgroup {
         @include clearfix;
-        border-top: 1px dotted #ccc;
+        border-top: 1px dotted $border-color;
         &:after {
             position: relative;
             top: -5px;
@@ -42,7 +74,7 @@ header[role = "main"] {
         }
     }
     
-    nav[role = "main"] {
+    nav[role = "navigation"] {
         float: right;
         width: 492px;
         margin-left: 10px;
@@ -64,9 +96,10 @@ header[role = "main"] {
                     a {
                         height: 26px;
                         width: 80px;
-                        border-bottom: 1px solid #ccc;
+                        border-bottom: 1px solid $border-color;
                         padding: 0 0 0 7px;
                         font-size: 22px;
+                        line-height: 26px;
                     }
                 }
                 &.about {
@@ -85,15 +118,14 @@ header[role = "main"] {
                     display: block;
                     height: 78px;
                     padding: 27px 6px 0;
-                    border-left: 1px solid #ccc;
+                    border-left: 1px solid $border-color;
                     font-size: 30px;
-                    color: $body-color;
-                    text-decoration: none;
                     text-transform: uppercase;
+                    text-decoration: none;
                     span {
                         display: block;
                         font-size: 11px;
-                        font-family: $body-font;
+                        font-family: $header-font;
                         text-transform: none;
                     }
                 }
