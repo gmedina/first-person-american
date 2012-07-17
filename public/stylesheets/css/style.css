@@ -140,44 +140,44 @@ button {
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
-  background: url('/public/images/sassy-ie-overlay.png?1342505008') repeat-x bottom left #1583ab;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1583ab), color-stop(70%, #12526c));
-  background: -webkit-linear-gradient(#1583ab, #12526c 70%);
-  background: -moz-linear-gradient(#1583ab, #12526c 70%);
-  background: -o-linear-gradient(#1583ab, #12526c 70%);
-  background: linear-gradient(#1583ab, #12526c 70%);
-  -webkit-box-shadow: #28b2e5 0 1px 0 inset;
-  -moz-box-shadow: #28b2e5 0 1px 0 inset;
-  box-shadow: #28b2e5 0 1px 0 inset;
-  border: 1px solid #0e4156;
+  background: url('/public/images/sassy-ie-overlay.png?1342505008') repeat-x bottom left #1893b5;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1893b5), color-stop(70%, #1582aa));
+  background: -webkit-linear-gradient(#1893b5, #1582aa 70%);
+  background: -moz-linear-gradient(#1893b5, #1582aa 70%);
+  background: -o-linear-gradient(#1893b5, #1582aa 70%);
+  background: linear-gradient(#1893b5, #1582aa 70%);
+  -webkit-box-shadow: #35bee4 0 1px 0 inset;
+  -moz-box-shadow: #35bee4 0 1px 0 inset;
+  box-shadow: #35bee4 0 1px 0 inset;
+  border: 1px solid #127193;
   color: white;
-  text-shadow: #062834 0 -1px 0;
+  text-shadow: #093743 0 -1px 0;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
 /* line 16, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 input[type="submit"]:hover,
 button:hover {
-  background-color: #0e4156;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #127294), color-stop(75%, #0e4156));
-  background: -webkit-linear-gradient(#127294 3%, #0e4156 75%);
-  background: -moz-linear-gradient(#127294 3%, #0e4156 75%);
-  background: -o-linear-gradient(#127294 3%, #0e4156 75%);
-  background: linear-gradient(#127294 3%, #0e4156 75%);
+  background-color: #127193;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #15819e), color-stop(75%, #127193));
+  background: -webkit-linear-gradient(#15819e 3%, #127193 75%);
+  background: -moz-linear-gradient(#15819e 3%, #127193 75%);
+  background: -o-linear-gradient(#15819e 3%, #127193 75%);
+  background: linear-gradient(#15819e 3%, #127193 75%);
 }
 /* line 19, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 input[type="submit"]:active,
 button:active {
-  -webkit-box-shadow: #0c3749 0 1px 2px inset;
-  -moz-box-shadow: #0c3749 0 1px 2px inset;
-  box-shadow: #0c3749 0 1px 2px inset;
+  -webkit-box-shadow: #116686 0 1px 2px inset;
+  -moz-box-shadow: #116686 0 1px 2px inset;
+  box-shadow: #116686 0 1px 2px inset;
 }
 /* line 6, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 input[type="submit"].disabled, input[type="submit"][disabled],
 button.disabled,
 button[disabled] {
   opacity: 0.6;
-  background: #12526c;
+  background: #1582aa;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
