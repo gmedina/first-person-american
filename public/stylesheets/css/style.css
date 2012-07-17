@@ -63,14 +63,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 2, ../sass/grid.scss */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url("../../fonts/bebasneue-webfont.eot");
@@ -79,7 +71,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 2, ../sass/grid.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 28, ../sass/style.scss */
 body {
   width: 960px;
   margin: 0 auto;
@@ -88,7 +88,7 @@ body {
   font-size: 14px;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 h1,
 h2,
 h3,
@@ -100,17 +100,17 @@ h6 {
   font-weight: bold;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 a {
   color: #1583ab;
   text-decoration: none;
 }
-/* line 56, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 input[type="password"],
 input[type="text"],
 textarea {
@@ -119,11 +119,69 @@ textarea {
   border: 1px solid #cccccc;
   margin-bottom: 8px;
 }
-/* line 68, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 input[type="password"].placeholder,
 input[type="text"].placeholder,
 textarea.placeholder {
   color: #aaa;
+}
+
+/* line 68, ../sass/style.scss */
+input[type="submit"],
+button {
+  font-size: 11px;
+  padding: 4px 3px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  background: url('/public/images/sassy-ie-overlay.png?1342505008') repeat-x bottom left #1583ab;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1583ab), color-stop(70%, #12526c));
+  background: -webkit-linear-gradient(#1583ab, #12526c 70%);
+  background: -moz-linear-gradient(#1583ab, #12526c 70%);
+  background: -o-linear-gradient(#1583ab, #12526c 70%);
+  background: linear-gradient(#1583ab, #12526c 70%);
+  -webkit-box-shadow: #28b2e5 0 1px 0 inset;
+  -moz-box-shadow: #28b2e5 0 1px 0 inset;
+  box-shadow: #28b2e5 0 1px 0 inset;
+  border: 1px solid #0e4156;
+  color: white;
+  text-shadow: #062834 0 -1px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+/* line 16, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0e4156;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #127294), color-stop(75%, #0e4156));
+  background: -webkit-linear-gradient(#127294 3%, #0e4156 75%);
+  background: -moz-linear-gradient(#127294 3%, #0e4156 75%);
+  background: -o-linear-gradient(#127294 3%, #0e4156 75%);
+  background: linear-gradient(#127294 3%, #0e4156 75%);
+}
+/* line 19, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type="submit"]:active,
+button:active {
+  -webkit-box-shadow: #0c3749 0 1px 2px inset;
+  -moz-box-shadow: #0c3749 0 1px 2px inset;
+  box-shadow: #0c3749 0 1px 2px inset;
+}
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type="submit"].disabled, input[type="submit"][disabled],
+button.disabled,
+button[disabled] {
+  opacity: 0.6;
+  background: #12526c;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 /* line 1, ../sass/header.scss */
@@ -313,37 +371,56 @@ footer[role="main"] {
   float: left;
   padding-left: 0;
   padding-right: 0;
+  zoom: 1;
   border-top: 1px dotted #cccccc;
   margin-top: 25px;
   font-size: 11px;
 }
-/* line 9, ../sass/footer.scss */
+/* line 4, ../sass/common-mixins.scss */
+footer[role="main"]:after, footer[role="main"]:before {
+  content: " ";
+  display: table;
+}
+/* line 8, ../sass/common-mixins.scss */
+footer[role="main"]:after {
+  clear: both;
+}
+/* line 10, ../sass/footer.scss */
+footer[role="main"]:after {
+  position: relative;
+  display: block;
+  z-index: -1;
+  content: " ";
+  background: url(../../images/bg-stripe-grey.png) top left repeat;
+  height: 10px;
+}
+/* line 19, ../sass/footer.scss */
 footer[role="main"] section {
   width: 240px;
   padding: 0 5px;
   float: left;
-  height: 155px;
+  height: 145px;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   border-right: 1px solid #cccccc;
   line-height: 15px;
 }
-/* line 17, ../sass/footer.scss */
+/* line 27, ../sass/footer.scss */
 footer[role="main"] section:first-child {
   padding-left: 0;
 }
-/* line 20, ../sass/footer.scss */
+/* line 30, ../sass/footer.scss */
 footer[role="main"] section:last-child {
   padding-right: 0;
   border-right: 0;
 }
-/* line 25, ../sass/footer.scss */
+/* line 35, ../sass/footer.scss */
 footer[role="main"] section.copyright p {
   width: 190px;
   color: #6e6e6e;
 }
-/* line 31, ../sass/footer.scss */
+/* line 41, ../sass/footer.scss */
 footer[role="main"] section.sitemap ul {
   zoom: 1;
 }
@@ -356,30 +433,30 @@ footer[role="main"] section.sitemap ul:after, footer[role="main"] section.sitema
 footer[role="main"] section.sitemap ul:after {
   clear: both;
 }
-/* line 33, ../sass/footer.scss */
+/* line 43, ../sass/footer.scss */
 footer[role="main"] section.sitemap ul li {
   float: left;
   clear: left;
   width: 100px;
 }
-/* line 38, ../sass/footer.scss */
+/* line 48, ../sass/footer.scss */
 footer[role="main"] section.sitemap ul .right {
   float: right;
   clear: right;
 }
-/* line 45, ../sass/footer.scss */
+/* line 55, ../sass/footer.scss */
 footer[role="main"] section.subscribe label {
   display: none;
 }
-/* line 48, ../sass/footer.scss */
+/* line 58, ../sass/footer.scss */
 footer[role="main"] section.subscribe input {
   display: block;
 }
-/* line 50, ../sass/footer.scss */
+/* line 60, ../sass/footer.scss */
 footer[role="main"] section.subscribe input[type="text"] {
   font-size: 11px;
 }
-/* line 55, ../sass/footer.scss */
+/* line 65, ../sass/footer.scss */
 footer[role="main"] section h6 {
   margin-bottom: 10px;
   color: #020202;
@@ -388,7 +465,7 @@ footer[role="main"] section h6 {
   font-weight: normal;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 #main {
   zoom: 1;
 }
@@ -401,14 +478,14 @@ footer[role="main"] section h6 {
 #main:after {
   clear: both;
 }
-/* line 78, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #main .content {
   width: 640px;
   padding: 0 5px;
   float: left;
   padding-left: 0;
 }
-/* line 83, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 #main .side-content {
   width: 320px;
   padding: 0 5px;

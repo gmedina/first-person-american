@@ -2,13 +2,23 @@ footer[role = "main"] {
     @include col($cols: 24);
     @include col-first;
     @include col-last;
+    @include clearfix;
     border-top: 1px dotted $border-color;
     margin-top: 25px;
     font-size: 11px;
 
+    &:after {
+        position: relative;
+        display: block;
+        z-index: -1;
+        content: " ";
+        background: url(../../images/bg-stripe-grey.png) top left repeat;
+        height: 10px;
+    }    
+
     section {
     	@include col($cols: 6);
-    	height: 155px;
+    	height: 145px;
     	padding-top: 15px;
     	padding-left: 15px;
     	padding-right: 15px;

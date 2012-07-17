@@ -1,17 +1,8 @@
 @import "compass/reset",
         "common-mixins",
-        "grid";
-
-@font-face {
-    font-family: 'BebasNeueRegular';
-    src: url('../../fonts/bebasneue-webfont.eot');
-    src: url('../../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/bebasneue-webfont.woff') format('woff'),
-         url('../../fonts/bebasneue-webfont.ttf') format('truetype'),
-         url('../../fonts/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}        
+        "font-faces",
+        "grid",
+        "sassy-buttons";
 
 //site dimensions
 $site-width: 960px;
@@ -30,6 +21,9 @@ $body-font: 'Open Sans',sans-serif;
 $header-font: 'Rokkitt',serif;
 $nav-font: 'BebasNeueRegular', sans-serif, serif, Helvetica;
 
+//sassy button defaults override
+$sb-padding: 4px 3px;
+$sb-line-height: 1em;
 
 body {
     width: $site-width;
@@ -68,6 +62,13 @@ textarea {
     &.placeholder {
         color: #aaa;
     }
+}
+
+input[type = "submit"],
+button {
+    @include sassy-button("matte", 0px, 11px, #1583ab, #12526c, #fff);
+    font-family: $body-font;
+    font-weight: bold;
 }
 
 @import "header",

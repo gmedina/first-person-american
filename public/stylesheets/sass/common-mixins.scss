@@ -10,7 +10,7 @@
     }
 }
 
-@mixin box-sizing ($box-sizing: border-box){
+@mixin box-sizing($box-sizing: border-box) {
     -moz-box-sizing:    $box-sizing;
     -webkit-box-sizing: $box-sizing;
     -ms-box-sizing:     $box-sizing;

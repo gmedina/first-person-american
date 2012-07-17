@@ -6,7 +6,7 @@
 $col-size: 30px;
 $col-gutter: 5px;
 
-@mixin col($cols) {
+@mixin col ($cols) {
     width: ($cols * $col-size) + (2 * $col-gutter * $cols);
     padding: 0 $col-gutter;
     float: left;
