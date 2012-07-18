@@ -185,7 +185,7 @@ button[disabled] {
 }
 
 /* line 1, ../sass/header.scss */
-header[role="main"] {
+.header {
   width: 960px;
   padding: 0 5px;
   float: left;
@@ -193,63 +193,63 @@ header[role="main"] {
   padding-right: 0;
 }
 /* line 6, ../sass/header.scss */
-header[role="main"] a {
+.header a {
   color: #020202;
 }
 /* line 10, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] {
+.header .toolbar {
   zoom: 1;
   padding: 7px 0;
 }
 /* line 4, ../sass/common-mixins.scss */
-header[role="main"] nav[role="toolbar"]:after, header[role="main"] nav[role="toolbar"]:before {
+.header .toolbar:after, .header .toolbar:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-header[role="main"] nav[role="toolbar"]:after {
+.header .toolbar:after {
   clear: both;
 }
 /* line 13, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] ul {
+.header .toolbar ul {
   float: right;
 }
 /* line 15, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] ul li {
+.header .toolbar ul li {
   float: left;
   font-family: "Rokkitt", serif;
   font-size: 13px;
 }
 /* line 19, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] ul li:after {
+.header .toolbar ul li:after {
   content: "|";
   padding-left: 10px;
   margin-right: 10px;
 }
 /* line 25, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] ul li:last-child:after {
+.header .toolbar ul li:last-child:after {
   content: none;
 }
 /* line 28, ../sass/header.scss */
-header[role="main"] nav[role="toolbar"] ul li:last-child a {
+.header .toolbar ul li:last-child a {
   color: #e33237;
 }
 /* line 38, ../sass/header.scss */
-header[role="main"] hgroup + hgroup {
+.header .navigation-wrapper {
   zoom: 1;
   border-top: 1px dotted #cccccc;
 }
 /* line 4, ../sass/common-mixins.scss */
-header[role="main"] hgroup + hgroup:after, header[role="main"] hgroup + hgroup:before {
+.header .navigation-wrapper:after, .header .navigation-wrapper:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-header[role="main"] hgroup + hgroup:after {
+.header .navigation-wrapper:after {
   clear: both;
 }
 /* line 41, ../sass/header.scss */
-header[role="main"] hgroup + hgroup:after {
+.header .navigation-wrapper:after {
   position: relative;
   top: -5px;
   display: block;
@@ -259,20 +259,20 @@ header[role="main"] hgroup + hgroup:after {
   height: 10px;
 }
 /* line 52, ../sass/header.scss */
-header[role="main"] .logo {
+.header .logo {
   float: left;
   position: relative;
   margin-top: 14px;
 }
 /* line 57, ../sass/header.scss */
-header[role="main"] .logo a img {
+.header .logo a img {
   width: 458px;
   height: 68px;
   border: 0;
   display: block;
 }
 /* line 64, ../sass/header.scss */
-header[role="main"] .logo .tagline {
+.header .logo .tagline {
   position: absolute;
   bottom: -10px;
   right: 0;
@@ -284,45 +284,42 @@ header[role="main"] .logo .tagline {
   text-transform: uppercase;
 }
 /* line 77, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] {
+.header .navigation {
   float: right;
   width: 492px;
   margin-left: 10px;
-}
-/* line 81, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul {
   zoom: 1;
   position: relative;
   font-family: "BebasNeueRegular", sans-serif, serif, Helvetica;
 }
 /* line 4, ../sass/common-mixins.scss */
-header[role="main"] nav[role="navigation"] ul:after, header[role="main"] nav[role="navigation"] ul:before {
+.header .navigation:after, .header .navigation:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-header[role="main"] nav[role="navigation"] ul:after {
+.header .navigation:after {
   clear: both;
 }
-/* line 85, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li {
+/* line 84, ../sass/header.scss */
+.header .navigation li {
   float: left;
 }
-/* line 87, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li:first-child a {
+/* line 86, ../sass/header.scss */
+.header .navigation li:first-child a {
   color: #1583ab;
 }
-/* line 89, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li:first-child a span {
+/* line 88, ../sass/header.scss */
+.header .navigation li:first-child a span {
   color: #020202;
 }
-/* line 93, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.nav-offset {
+/* line 92, ../sass/header.scss */
+.header .navigation li.nav-offset {
   position: absolute;
   right: 0;
 }
-/* line 96, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.nav-offset a {
+/* line 95, ../sass/header.scss */
+.header .navigation li.nav-offset a {
   height: 26px;
   width: 80px;
   border-bottom: 1px solid #cccccc;
@@ -330,24 +327,24 @@ header[role="main"] nav[role="navigation"] ul li.nav-offset a {
   font-size: 22px;
   line-height: 26px;
 }
-/* line 105, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.about {
+/* line 104, ../sass/header.scss */
+.header .navigation li.about {
   top: 0px;
 }
-/* line 108, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.programs {
+/* line 107, ../sass/header.scss */
+.header .navigation li.programs {
   top: 26px;
 }
-/* line 111, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.blog {
+/* line 110, ../sass/header.scss */
+.header .navigation li.blog {
   top: 52px;
 }
-/* line 113, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li.blog a {
+/* line 112, ../sass/header.scss */
+.header .navigation li.blog a {
   border-bottom: 0;
 }
-/* line 117, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li a {
+/* line 116, ../sass/header.scss */
+.header .navigation li a {
   display: block;
   height: 78px;
   padding: 27px 6px 0;
@@ -356,8 +353,8 @@ header[role="main"] nav[role="navigation"] ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 125, ../sass/header.scss */
-header[role="main"] nav[role="navigation"] ul li a span {
+/* line 124, ../sass/header.scss */
+.header .navigation li a span {
   display: block;
   font-size: 11px;
   font-family: "Rokkitt", serif;
@@ -365,7 +362,7 @@ header[role="main"] nav[role="navigation"] ul li a span {
 }
 
 /* line 1, ../sass/footer.scss */
-footer[role="main"] {
+.footer {
   width: 960px;
   padding: 0 5px;
   float: left;
@@ -374,19 +371,20 @@ footer[role="main"] {
   zoom: 1;
   border-top: 1px dotted #cccccc;
   margin-top: 25px;
+  margin-bottom: 50px;
   font-size: 11px;
 }
 /* line 4, ../sass/common-mixins.scss */
-footer[role="main"]:after, footer[role="main"]:before {
+.footer:after, .footer:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-footer[role="main"]:after {
+.footer:after {
   clear: both;
 }
-/* line 10, ../sass/footer.scss */
-footer[role="main"]:after {
+/* line 11, ../sass/footer.scss */
+.footer:after {
   position: relative;
   display: block;
   z-index: -1;
@@ -394,8 +392,8 @@ footer[role="main"]:after {
   background: url(../../images/bg-stripe-grey.png) top left repeat;
   height: 10px;
 }
-/* line 19, ../sass/footer.scss */
-footer[role="main"] section {
+/* line 20, ../sass/footer.scss */
+.footer > div {
   width: 240px;
   padding: 0 5px;
   float: left;
@@ -406,58 +404,58 @@ footer[role="main"] section {
   border-right: 1px solid #cccccc;
   line-height: 15px;
 }
-/* line 27, ../sass/footer.scss */
-footer[role="main"] section:first-child {
+/* line 28, ../sass/footer.scss */
+.footer > div:first-child {
   padding-left: 0;
 }
-/* line 30, ../sass/footer.scss */
-footer[role="main"] section:last-child {
+/* line 31, ../sass/footer.scss */
+.footer > div:last-child {
   padding-right: 0;
   border-right: 0;
 }
-/* line 35, ../sass/footer.scss */
-footer[role="main"] section.copyright p {
+/* line 36, ../sass/footer.scss */
+.footer > div.copyright p {
   width: 190px;
   color: #6e6e6e;
 }
-/* line 41, ../sass/footer.scss */
-footer[role="main"] section.sitemap ul {
+/* line 42, ../sass/footer.scss */
+.footer > div.sitemap ul {
   zoom: 1;
 }
 /* line 4, ../sass/common-mixins.scss */
-footer[role="main"] section.sitemap ul:after, footer[role="main"] section.sitemap ul:before {
+.footer > div.sitemap ul:after, .footer > div.sitemap ul:before {
   content: " ";
   display: table;
 }
 /* line 8, ../sass/common-mixins.scss */
-footer[role="main"] section.sitemap ul:after {
+.footer > div.sitemap ul:after {
   clear: both;
 }
-/* line 43, ../sass/footer.scss */
-footer[role="main"] section.sitemap ul li {
+/* line 44, ../sass/footer.scss */
+.footer > div.sitemap ul li {
   float: left;
   clear: left;
   width: 100px;
 }
-/* line 48, ../sass/footer.scss */
-footer[role="main"] section.sitemap ul .right {
+/* line 49, ../sass/footer.scss */
+.footer > div.sitemap ul .right {
   float: right;
   clear: right;
 }
-/* line 55, ../sass/footer.scss */
-footer[role="main"] section.subscribe label {
+/* line 56, ../sass/footer.scss */
+.footer > div.subscribe label {
   display: none;
 }
-/* line 58, ../sass/footer.scss */
-footer[role="main"] section.subscribe input {
+/* line 59, ../sass/footer.scss */
+.footer > div.subscribe input {
   display: block;
 }
-/* line 60, ../sass/footer.scss */
-footer[role="main"] section.subscribe input[type="text"] {
+/* line 61, ../sass/footer.scss */
+.footer > div.subscribe input[type="text"] {
   font-size: 11px;
 }
-/* line 65, ../sass/footer.scss */
-footer[role="main"] section h6 {
+/* line 66, ../sass/footer.scss */
+.footer > div h6 {
   margin-bottom: 10px;
   color: #020202;
   font-size: 14px;
