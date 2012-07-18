@@ -20,6 +20,7 @@ http.createServer(function(request, response) {
 	if (fs.statSync(filename).isDirectory()) filename += '/index.html';
 
     fs.readFile(filename, "binary", function(err, file) {
+      var contentType = ""
       if(err) {        
         response.writeHead(500, {"Content-Type": "text/plain"});
         response.write(err + "\n");
@@ -27,7 +28,19 @@ http.createServer(function(request, response) {
         return;
       }
 
-      response.writeHead(200);
+      if(filename.indexOf('.css') != -1) {
+        contentType = {"Content-Type" : "text/css"};
+      }
+      else if(filename.indexOf('.js') != -1) {
+        contentType = {"Content-Type" : "application/x-javascript"};
+      } 
+      else {
+        contentType = {"Content-Type" : "text/html"};
+      }
+
+      console.log(filename);
+      console.log(contentType); 
+      response.writeHead(200, contentType);
       response.write(file, "binary");
       response.end();
     });
