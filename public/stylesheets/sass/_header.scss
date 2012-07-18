@@ -1,4 +1,4 @@
-header[role = "main"] {
+.header {
     @include col($cols: 24);
     @include col-first;
     @include col-last;
@@ -7,7 +7,7 @@ header[role = "main"] {
         color: $body-color;
     }
 
-    nav[role = "toolbar"] {
+    .toolbar {
         @include clearfix;
         padding: 7px 0;
         ul {
@@ -35,7 +35,7 @@ header[role = "main"] {
         }
     }
     
-    hgroup + hgroup {
+    .navigation-wrapper {
         @include clearfix;
         border-top: 1px dotted $border-color;
         &:after {
@@ -73,61 +73,59 @@ header[role = "main"] {
             text-transform: uppercase;
         }
     }
-    
-    nav[role = "navigation"] {
+
+    .navigation {
         float: right;
         width: 492px;
         margin-left: 10px;
-        ul {
-            @include clearfix;
-            position: relative;
-            font-family: $nav-font;            
-            li {
-                float: left;
-                &:first-child a {
-                    color: $header-color;
-                    span {
-                        color: $body-color;
-                    }
+        @include clearfix;
+        position: relative;
+        font-family: $nav-font;            
+        li {
+            float: left;
+            &:first-child a {
+                color: $header-color;
+                span {
+                    color: $body-color;
                 }
-                &.nav-offset {
-                    position: absolute;
-                    right: 0;
-                    a {
-                        height: 26px;
-                        width: 80px;
-                        border-bottom: 1px solid $border-color;
-                        padding: 0 0 0 7px;
-                        font-size: 22px;
-                        line-height: 26px;
-                    }
-                }
-                &.about {
-                    top: 0px;
-                }
-                &.programs {
-                    top: 26px;
-                }
-                &.blog {
-                    top: 52px;
-                    a {
-                        border-bottom: 0;
-                    }
-                }
+            }
+            &.nav-offset {
+                position: absolute;
+                right: 0;
                 a {
+                    height: 26px;
+                    width: 80px;
+                    border-bottom: 1px solid $border-color;
+                    padding: 0 0 0 7px;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+            }
+            &.about {
+                top: 0px;
+            }
+            &.programs {
+                top: 26px;
+            }
+            &.blog {
+                top: 52px;
+                a {
+                    border-bottom: 0;
+                }
+            }
+            a {
+                display: block;
+                height: 78px;
+                padding: 27px 6px 0;
+                border-left: 1px solid $border-color;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-decoration: none;
+                span {
                     display: block;
-                    height: 78px;
-                    padding: 27px 6px 0;
-                    border-left: 1px solid $border-color;
-                    font-size: 30px;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    span {
-                        display: block;
-                        font-size: 11px;
-                        font-family: $header-font;
-                        text-transform: none;
-                    }
+                    font-size: 11px;
+                    font-family: $header-font;
+                    text-transform: none;
                 }
             }
         }
