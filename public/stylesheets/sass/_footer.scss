@@ -9,11 +9,11 @@
     font-size: 11px;
 
     &:after {
+        @extend .stripes-secondary;
         position: relative;
         display: block;
         z-index: -1;
         content: " ";
-        background: url(../../images/bg-stripe-grey.png) top left repeat;
         height: 10px;
     }    
 
@@ -60,6 +60,7 @@
     			display: block;
     			&[type = "text"] {
     				font-size: 11px;
+                    width: 100%;
     			}
     		}
     	}

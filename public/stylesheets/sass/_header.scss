@@ -3,6 +3,8 @@
     @include col-first;
     @include col-last;
 
+    margin-bottom: 15px;
+
     a {
         color: $body-color;
     }
@@ -39,12 +41,12 @@
         @include clearfix;
         border-top: 1px dotted $border-color;
         &:after {
+            @extend .stripes-secondary;
             position: relative;
             top: -5px;
             display: block;
             z-index: -1;
-            content: " ";
-            background: url(../../images/bg-stripe-grey.png) top left repeat;
+            content: " ";            
             height: 10px;
         }
     }
@@ -80,7 +82,7 @@
         margin-left: 10px;
         @include clearfix;
         position: relative;
-        font-family: $nav-font;            
+        font-family: $secondary-font;            
         li {
             float: left;
             &:first-child a {

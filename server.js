@@ -34,8 +34,11 @@ http.createServer(function(request, response) {
       else if(filename.indexOf('.js') != -1) {
         contentType = {"Content-Type" : "application/x-javascript"};
       } 
-      else {
+      else if(filename.indexOf('.html') != -1) {
         contentType = {"Content-Type" : "text/html"};
+      }
+      else {
+        contentType = {};
       }
 
       console.log(filename);

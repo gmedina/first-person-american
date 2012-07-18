@@ -1,0 +1,15 @@
+@import "variables",
+        "common-mixins",
+        "font-faces",
+        "grid",
+        "sassy-buttons",
+        "search-module";
+
+.stories-page {
+	.header-large {
+		display: inline;
+	}
+	h3 {
+		display: inline;
+	}	
+}

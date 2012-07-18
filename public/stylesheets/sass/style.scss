@@ -1,29 +1,14 @@
 @import "compass/reset",
+        "variables",
         "common-mixins",
         "font-faces",
         "grid",
         "sassy-buttons";
 
-//site dimensions
-$site-width: 960px;
-
-//font-colors
-$body-color: #020202;
-$body-secondary: #6e6e6e;
-$header-color: #1583AB;
-$header-color-secondary: #e33237;
-
-//borders
-$border-color: #ccc;
-
-//font
-$body-font: 'Open Sans',sans-serif;
-$header-font: 'Rokkitt',serif;
-$nav-font: 'BebasNeueRegular', sans-serif, serif, Helvetica;
-
-//sassy button defaults override
-$sb-padding: 4px 3px;
-$sb-line-height: 1em;
+//lets change the box model to what makes sense :)
+* {
+    @include box-sizing;
+}
 
 body {
     width: $site-width;
@@ -55,20 +40,60 @@ a {
 input[type = "password"],
 input[type = "text"],
 textarea {
-    width: 100%;
     padding: 5px;
     border: 1px solid $border-color;
     margin-bottom: 8px;
+    vertical-align: top;
     &.placeholder {
         color: #aaa;
     }
 }
 
-input[type = "submit"],
+input[type="submit"],
 button {
+    vertical-align: top;
+}
+
+.button-primary {
     @include sassy-button("matte", 0px, 11px, #1893b5, #1582aa, #fff);
     font-family: $body-font;
     font-weight: bold;
+    line-height: normal !important;
+}
+
+.button-primary-icon {
+    @include sassy-button("matte", 0px, 11px, #1893b5, #1582aa, #fff);
+    font-family: $body-font;
+    font-weight: bold;    
+    padding: 0;     
+    line-height: normal !important;
+    .search-button {
+        background: url(../../images/icon-search.png) transparent center center no-repeat;          
+        height: 28px;
+        width: 28px;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        text-indent: -9999px;
+        line-height: normal !important;
+    }
+}
+
+//ie7 crap
+.lt-ie8 {
+    .button-primary-icon {
+        width: 28px;
+        height: 28px; 
+        .search-button {
+            display: block;
+            font-size: 0;
+            line-height: 0 !important;
+        }
+    }
+}
+
+p {
+    line-height: 20px;
 }
 
 @import "header",
@@ -86,6 +111,41 @@ button {
         @include col-last;
         padding-left: 20px;
     }    
+}
+
+.breadcrumbs {
+    font-family: $header-font;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.header-large {
+    font-family: $secondary-font;
+    font-size: 70px;
+    color: $body-color;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.subheader {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.section-header,
+h4 {
+    font-family: $header-font;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.stripes {
+    background: url(../../images/bg-stripe-blue.png) top left repeat;
+}
+
+.stripes-secondary {
+    background: url(../../images/bg-stripe-grey.png) top left repeat;
 }
 
 

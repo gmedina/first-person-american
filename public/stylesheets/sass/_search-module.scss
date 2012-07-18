@@ -1,0 +1,42 @@
+.search {
+	padding: 8px;
+	margin: 20px 0;
+	form {
+		div {
+			position: relative;
+		}
+		legend {
+			display: block;
+			width: 100%;
+			margin-bottom: 5px;
+			a {
+				font-family: $body-font;
+				color: $header-color-secondary;
+				font-size: 11px;
+				float: right;
+				text-transform: none;
+			}
+		}
+		label {
+			display: none;
+		}
+		input[type="text"] {
+			height: 30px;
+			margin-bottom: 0;
+			font-size: 11px;
+			width: 100%;
+		}
+		.button-primary-icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+//ie7 crap
+.lt-ie8 .search form {
+	input {
+		padding: 0 5px;
+	}
+}

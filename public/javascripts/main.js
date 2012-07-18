@@ -17,6 +17,14 @@ $(document).ready(function() {
 			var html = Mustache.to_html(tmp, this.model);
 			$("#main").after(html);
 		}
+	}, {
+		relativeURL : "stories.html",
+		id : "tmp-stories",
+		model : {},
+		callback : function(tmp) {
+			var html = Mustache.to_html(tmp, this.model);
+			$("#main").html(html);
+		}
 	}];
 
 	var loadTemplate = function(config) {
