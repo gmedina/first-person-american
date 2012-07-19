@@ -1,0 +1,24 @@
+@function getPointerSide($side) {
+	@if $side == left {
+		@return right;
+	}
+	@if $side == right {
+		@return left;
+	}
+	@if $side == top {
+		@return bottom; 
+	}
+	@return top;
+}
+
+@function getPointerCenterSide($side) {
+	@if $side == left or $side == right {
+		@return top;
+	}
+	@return left;
+}
+
+@function getBorderWidthSizeOffset($size, $border-size) {
+
+	@return round($size + ($border-size / sin(45)));
+}

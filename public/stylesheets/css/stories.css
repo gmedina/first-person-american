@@ -57,40 +57,90 @@
   display: inline;
 }
 /* line 12, ../sass/stories.scss */
-.stories-page h3 {
+.stories-page .subheader {
   display: inline;
 }
 
-/* line 18, ../sass/stories.scss */
+/* line 17, ../sass/stories.scss */
+.stories-list-wrapper {
+  padding-top: 10px;
+}
+/* line 19, ../sass/stories.scss */
+.stories-list-wrapper .stories-functions {
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.stories-list-wrapper .stories-functions:after, .stories-list-wrapper .stories-functions:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.stories-list-wrapper .stories-functions:after {
+  clear: both;
+}
+/* line 22, ../sass/stories.scss */
+.stories-list-wrapper .stories-counter {
+  float: left;
+  font-family: "Rokkitt", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+/* line 28, ../sass/stories.scss */
+.stories-list-wrapper .stories-counter span {
+  color: #1583ab;
+}
+/* line 32, ../sass/stories.scss */
+.stories-list-wrapper .filter-wrapper {
+  float: right;
+  position: relative;
+  top: -11px;
+}
+/* line 36, ../sass/stories.scss */
+.stories-list-wrapper .filter-wrapper label {
+  font-family: "Rokkitt", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 42, ../sass/stories.scss */
+.stories-list-wrapper .filter-wrapper span, .stories-list-wrapper .filter-wrapper select {
+  vertical-align: middle;
+}
+/* line 47, ../sass/stories.scss */
+.stories-list-wrapper .stories {
+  clear: both;
+  border-top: 1px dotted #cccccc;
+}
+/* line 51, ../sass/stories.scss */
 .stories-list-wrapper .stories .story {
   zoom: 1;
   padding: 10px 1px;
   display: table;
   width: 100%;
 }
-/* line 4, ../sass/_common-mixins.scss */
+/* line 6, ../sass/_common-mixins.scss */
 .stories-list-wrapper .stories .story:after, .stories-list-wrapper .stories .story:before {
   content: " ";
   display: table;
 }
-/* line 8, ../sass/_common-mixins.scss */
+/* line 10, ../sass/_common-mixins.scss */
 .stories-list-wrapper .stories .story:after {
   clear: both;
 }
-/* line 23, ../sass/stories.scss */
+/* line 56, ../sass/stories.scss */
 .stories-list-wrapper .stories .story > * {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   -ms-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 26, ../sass/stories.scss */
+/* line 59, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .profile-img {
   display: table-cell;
   vertical-align: middle;
   width: 50px;
 }
-/* line 31, ../sass/stories.scss */
+/* line 64, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .full-name {
   display: table-cell;
   vertical-align: middle;
@@ -99,7 +149,7 @@
   padding: 0 10px;
   font-height: 15px;
 }
-/* line 39, ../sass/stories.scss */
+/* line 72, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .story-info {
   display: table-cell;
   vertical-align: middle;
@@ -107,7 +157,7 @@
   max-width: 295px;
   padding-right: 10px;
 }
-/* line 45, ../sass/stories.scss */
+/* line 78, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .story-info a {
   display: block;
   font-size: 22px;
@@ -117,7 +167,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 55, ../sass/stories.scss */
+/* line 88, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info {
   display: table-cell;
   vertical-align: middle;
@@ -125,19 +175,19 @@
   max-width: 185px;
   line-height: 18px;
 }
-/* line 61, ../sass/stories.scss */
+/* line 94, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info .flag-icon {
   background: url(../../images/icon-flag.png) center left no-repeat;
 }
-/* line 64, ../sass/stories.scss */
+/* line 97, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info .home-icon {
   background: url(../../images/icon-home.png) center left no-repeat;
 }
-/* line 67, ../sass/stories.scss */
+/* line 100, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info .plane-icon {
   background: url(../../images/icon-plane.png) center left no-repeat;
 }
-/* line 70, ../sass/stories.scss */
+/* line 103, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info dt {
   float: left;
   clear: left;
@@ -147,7 +197,53 @@
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 79, ../sass/stories.scss */
+/* line 112, ../sass/stories.scss */
 .stories-list-wrapper .stories .story .other-info dd {
   float: left;
+}
+/* line 117, ../sass/stories.scss */
+.stories-list-wrapper .load-more {
+  background: #fff8df;
+  line-height: 75px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: "Rokkitt", serif;
+}
+
+/* line 128, ../sass/stories.scss */
+.featured-programs p {
+  font-size: 11px;
+  margin-bottom: 20px;
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.featured-programs p:after, .featured-programs p:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.featured-programs p:after {
+  clear: both;
+}
+/* line 133, ../sass/stories.scss */
+.featured-programs p img {
+  float: left;
+  padding: 6px 10px 0 0;
+  display: block;
+}
+/* line 138, ../sass/stories.scss */
+.featured-programs a {
+  color: #e33237;
+  font-size: 12px;
+}
+
+/* line 144, ../sass/stories.scss */
+.join-cta-banner {
+  background: url(../../images/img-become-fpa.png) top left no-repeat;
+  display: block;
+  width: 300px;
+  height: 141px;
+  text-indent: -9999px;
+  margin: 85px 0 30px;
 }

@@ -1,3 +1,5 @@
+@import "helper-functions";
+
 @mixin clearfix {
     zoom: 1;
     &:after,
@@ -15,4 +17,52 @@
     -webkit-box-sizing: $box-sizing;
     -ms-box-sizing:     $box-sizing;
      box-sizing:        $box-sizing;
+}
+
+@mixin css-pointer-left ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
+    $side: getPointerSide($side);
+    $centerSide: getPointerCenterSide($side);
+    $sizeOffset: getBorderWidthSizeOffset($size, $border-width);
+
+    position: relative;
+    border: $border-width solid $border-color;
+    background-color: $background-color;
+    color: $color;
+
+    &:after,
+    &:before {
+        position: absolute;
+        #{$side}: 100%;
+        height: 0;
+        width: 0;       
+        border: solid transparent;
+        content: " ";
+        pointer-events: none;
+    }
+
+    &:after {
+        #{$centerSide}: 50%;
+        border-#{$side}-color: $background-color;
+        border-width: $size;
+        margin-#{$centerSide}: -$size;                  
+    }
+
+    &:before {
+        #{$centerSide}: 50%;
+        border-#{$side}-color: $border-color;
+        border-width: #{$sizeOffset};
+        margin-#{$centerSide}: -#{$sizeOffset};
+    }   
+}
+
+@mixin tag-creator ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
+    @include css-pointer-left($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color);
+    padding: 0 3px; 
+    margin-right: 9px;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+    line-height: 13px;
+    display: inline-block;
 }

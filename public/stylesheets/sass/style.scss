@@ -54,6 +54,23 @@ button {
     vertical-align: top;
 }
 
+.custom-select {
+    display: inline-block;
+    width: 145px;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    background: url(../../images/icon-drop-down.png) 97% center no-repeat;
+    select {
+        width: 170px;
+        padding: 5px;
+        font-size: 11px;
+        border: 0;
+        background: transparent;
+        -webkit-appearance: none;
+        height: 26px;
+    }
+}
+
 .button-primary {
     @include sassy-button("matte", 0px, 11px, #1893b5, #1582aa, #fff);
     font-family: $body-font;
@@ -91,6 +108,7 @@ button {
         }
     }
 }
+//end ie7 crap
 
 p {
     line-height: 20px;
@@ -146,6 +164,30 @@ h4 {
 
 .stripes-secondary {
     background: url(../../images/bg-stripe-grey.png) top left repeat;
+}
+
+.highlight-header {
+    @extend .stripes-secondary;
+    margin-bottom: 10px;
+    span {
+        background: #fff;
+        color: $body-color;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-right: 7px;
+    }
+}
+
+.tag-yellow {
+    @include tag-creator($side: left, $border-color: #ccc, $background-color: #ffd52b, $border-width: 1px, $size: 7px, $color: #fff);
+}
+
+.tag-orange {
+    @include tag-creator($side: left, $border-color: #ccc, $background-color: $header-color-tertiary, $border-width: 1px, $size: 7px, $color: #fff);
+}
+
+.tag-green {
+    @include tag-creator($side: left, $border-color: #ccc, $background-color: #4fb547, $border-width: 1px, $size: 7px, $color: #fff);
 }
 
 

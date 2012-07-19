@@ -9,12 +9,45 @@
 	.header-large {
 		display: inline;
 	}
-	h3 {
+	.subheader {
 		display: inline;
 	}
 }
 
 .stories-list-wrapper {
+	padding-top: 10px;
+	.stories-functions {
+		@include clearfix;
+	}
+	.stories-counter {
+		float: left;
+		font-family: $header-font;
+		font-size: 17px;
+		text-transform: uppercase;
+		line-height: 26px;
+		span {
+			color: $header-color;
+		}
+	}
+	.filter-wrapper {
+		float: right;
+		position: relative;
+		top: -11px;
+		label {
+			font-family: $header-font;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		span, select {
+			vertical-align: middle;
+		}
+	}
+
+	.stories {
+		clear: both;
+		border-top: 1px dotted $border-color;
+	}
 	.stories .story {
 		@include clearfix;
 		padding: 10px 1px;
@@ -81,5 +114,39 @@
 			}
 		}
 	}
+	.load-more {
+		background: #fff8df;
+		line-height: 75px;
+		text-align: center;
+		font-size: 11px;
+		text-transform: uppercase;
+		font-family: $header-font;
+	}
+}
+
+.featured-programs {
+	p {
+		font-size: 11px;
+		margin-bottom: 20px;
+		@include clearfix;
+	}
+	p img {
+		float: left;
+		padding: 6px 10px 0 0;
+		display: block;
+	}
+	a {
+		color: $header-color-secondary;
+		font-size: 12px;
+	}
+}
+
+.join-cta-banner {
+	background: url(../../images/img-become-fpa.png) top left no-repeat;
+	display: block;
+	width: 300px;
+	height: 141px;
+	text-indent: -9999px;
+	margin: 85px 0 30px;
 }
 
