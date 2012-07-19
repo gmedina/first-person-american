@@ -429,21 +429,30 @@ p {
   border-bottom: 0;
 }
 /* line 118, ../sass/_header.scss */
+.header .navigation li.fix-width {
+  width: 130px;
+}
+/* line 121, ../sass/_header.scss */
 .header .navigation li a {
   display: block;
   height: 78px;
   padding: 27px 6px 0;
   border-left: 1px solid #cccccc;
+  background: #fff;
   font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 126, ../sass/_header.scss */
+/* line 130, ../sass/_header.scss */
 .header .navigation li a span {
   display: block;
   font-size: 11px;
   font-family: "Rokkitt", serif;
   text-transform: none;
+}
+/* line 136, ../sass/_header.scss */
+.header .navigation li a:hover {
+  background: #ffd52b;
 }
 
 /* line 1, ../sass/_footer.scss */

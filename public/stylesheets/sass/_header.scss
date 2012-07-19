@@ -115,11 +115,15 @@
                     border-bottom: 0;
                 }
             }
+            &.fix-width {
+                width: 130px;
+            }
             a {
                 display: block;
                 height: 78px;
                 padding: 27px 6px 0;
                 border-left: 1px solid $border-color;
+                background: #fff;
                 font-size: 30px;
                 text-transform: uppercase;
                 text-decoration: none;
@@ -128,6 +132,9 @@
                     font-size: 11px;
                     font-family: $header-font;
                     text-transform: none;
+                }
+                &:hover {
+                    background: #ffd52b;
                 }
             }
         }

@@ -60,3 +60,94 @@
 .stories-page h3 {
   display: inline;
 }
+
+/* line 18, ../sass/stories.scss */
+.stories-list-wrapper .stories .story {
+  zoom: 1;
+  padding: 10px 1px;
+  display: table;
+  width: 100%;
+}
+/* line 4, ../sass/_common-mixins.scss */
+.stories-list-wrapper .stories .story:after, .stories-list-wrapper .stories .story:before {
+  content: " ";
+  display: table;
+}
+/* line 8, ../sass/_common-mixins.scss */
+.stories-list-wrapper .stories .story:after {
+  clear: both;
+}
+/* line 23, ../sass/stories.scss */
+.stories-list-wrapper .stories .story > * {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 26, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .profile-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50px;
+}
+/* line 31, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .full-name {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70px;
+  max-width: 70px;
+  padding: 0 10px;
+  font-height: 15px;
+}
+/* line 39, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .story-info {
+  display: table-cell;
+  vertical-align: middle;
+  width: 295px;
+  max-width: 295px;
+  padding-right: 10px;
+}
+/* line 45, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .story-info a {
+  display: block;
+  font-size: 22px;
+  font-family: "Rokkitt", serif;
+  color: #ff6917;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 55, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info {
+  display: table-cell;
+  vertical-align: middle;
+  width: 185px;
+  max-width: 185px;
+  line-height: 18px;
+}
+/* line 61, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info .flag-icon {
+  background: url(../../images/icon-flag.png) center left no-repeat;
+}
+/* line 64, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info .home-icon {
+  background: url(../../images/icon-home.png) center left no-repeat;
+}
+/* line 67, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info .plane-icon {
+  background: url(../../images/icon-plane.png) center left no-repeat;
+}
+/* line 70, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info dt {
+  float: left;
+  clear: left;
+  width: 65px;
+  padding-left: 15px;
+  color: #a6b9c0;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+/* line 79, ../sass/stories.scss */
+.stories-list-wrapper .stories .story .other-info dd {
+  float: left;
+}
