@@ -1,0 +1,326 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("../../fonts/bebasneue-webfont.eot");
+  src: url("../../fonts/bebasneue-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/bebasneue-webfont.woff") format("woff"), url("../../fonts/bebasneue-webfont.ttf") format("truetype"), url("../../fonts/bebasneue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 8, ../sass/basic-form.scss */
+#main.basic-form-page .content-wrapper {
+  border-top: 1px dotted #cccccc;
+  background: #e7f1f5;
+}
+/* line 14, ../sass/basic-form.scss */
+#main.basic-form-page .side-content {
+  width: 200px;
+  padding: 0 5px;
+  float: left;
+  padding-left: 0;
+}
+/* line 17, ../sass/basic-form.scss */
+#main.basic-form-page .side-content ul {
+  margin-top: 20px;
+  font-family: "BebasNeueRegular", sans-serif, serif, Helvetica;
+}
+/* line 20, ../sass/basic-form.scss */
+#main.basic-form-page .side-content ul li {
+  overflow: visible;
+}
+/* line 23, ../sass/basic-form.scss */
+#main.basic-form-page .side-content ul a {
+  display: block;
+  padding-left: 30px;
+  line-height: 35px;
+  color: #020202;
+  font-size: 18px;
+}
+/* line 30, ../sass/basic-form.scss */
+#main.basic-form-page .side-content ul a.highlight {
+  position: relative;
+  border: 1px solid #1583ab;
+  background-color: #1583ab;
+  color: white;
+}
+/* line 33, ../sass/_common-mixins.scss */
+#main.basic-form-page .side-content ul a.highlight:after, #main.basic-form-page .side-content ul a.highlight:before {
+  position: absolute;
+  left: 100%;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  content: " ";
+  pointer-events: none;
+}
+/* line 43, ../sass/_common-mixins.scss */
+#main.basic-form-page .side-content ul a.highlight:after {
+  top: 50%;
+  border-left-color: #1583ab;
+  border-width: 18px;
+  margin-top: -18px;
+}
+/* line 50, ../sass/_common-mixins.scss */
+#main.basic-form-page .side-content ul a.highlight:before {
+  top: 50%;
+  border-left-color: #1583ab;
+  border-width: 19px;
+  margin-top: -19px;
+}
+/* line 32, ../sass/basic-form.scss */
+#main.basic-form-page .side-content ul a.highlight:hover {
+  text-decoration: none;
+}
+/* line 38, ../sass/basic-form.scss */
+#main.basic-form-page .content {
+  width: 760px;
+  padding: 0 5px;
+  float: left;
+  padding-right: 0;
+  padding-left: 30px;
+  padding-top: 40px;
+  background: #e0edf2;
+  margin-bottom: 70px;
+}
+/* line 46, ../sass/basic-form.scss */
+#main.basic-form-page .content form {
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form:after, #main.basic-form-page .content form:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form:after {
+  clear: both;
+}
+/* line 48, ../sass/basic-form.scss */
+#main.basic-form-page .content form fieldset {
+  width: 600px;
+  padding: 0 5px;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 15px;
+  padding-top: 9px;
+}
+/* line 56, ../sass/basic-form.scss */
+#main.basic-form-page .content form p {
+  padding-bottom: 10px;
+}
+/* line 61, ../sass/basic-form.scss */
+#main.basic-form-page .content form .legend-fix {
+  zoom: 1;
+  margin-top: 40px;
+}
+/* line 6, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .legend-fix:after, #main.basic-form-page .content form .legend-fix:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .legend-fix:after {
+  clear: both;
+}
+/* line 66, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  overflow: visible;
+}
+/* line 73, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div {
+  height: 23px;
+  padding: 3px 0 0 30px;
+  margin-bottom: 17px;
+  position: relative;
+  top: 10px;
+}
+/* line 79, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div.user-info-icon {
+  background: url(../../images/img-form-sprites.png) 0px 0px no-repeat;
+}
+/* line 82, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div.journey-info-icon {
+  background: url(../../images/img-form-sprites.png) 0px -46px no-repeat;
+}
+/* line 85, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div.history-info-icon {
+  background: url(../../images/img-form-sprites.png) 0px -23px no-repeat;
+}
+/* line 88, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div .stripes-dark {
+  display: block;
+  color: #020202;
+}
+/* line 91, ../sass/basic-form.scss */
+#main.basic-form-page .content form legend div .stripes-dark span {
+  background: #e0edf2;
+  display: inline-block;
+  font-family: "Rokkitt", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+/* line 102, ../sass/basic-form.scss */
+#main.basic-form-page .content form .field-wrapper {
+  zoom: 1;
+  padding-bottom: 8px;
+  position: relative;
+}
+/* line 6, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .field-wrapper:after, #main.basic-form-page .content form .field-wrapper:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .field-wrapper:after {
+  clear: both;
+}
+/* line 109, ../sass/basic-form.scss */
+#main.basic-form-page .content form .nationality-hidden,
+#main.basic-form-page .content form .f-family-hidden,
+#main.basic-form-page .content form .m-family-hidden {
+  display: none;
+}
+/* line 112, ../sass/basic-form.scss */
+#main.basic-form-page .content form label {
+  font-family: "Rokkitt", serif;
+  font-weight: bold;
+  font-size: 15px;
+  float: left;
+  display: block;
+  line-height: 26px;
+}
+/* line 119, ../sass/basic-form.scss */
+#main.basic-form-page .content form label.datepicker-icon {
+  background: url(../../images/icon-datepicker.png);
+  width: 17px;
+  height: 16px;
+  float: none;
+  line-height: 0;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+/* line 131, ../sass/basic-form.scss */
+#main.basic-form-page .content form input[type="text"],
+#main.basic-form-page .content form select {
+  float: right;
+  width: 170px;
+  margin-bottom: 0;
+}
+/* line 135, ../sass/basic-form.scss */
+#main.basic-form-page .content form input[type="text"].history-input-sm,
+#main.basic-form-page .content form select.history-input-sm {
+  width: 135px;
+}
+/* line 138, ../sass/basic-form.scss */
+#main.basic-form-page .content form input[type="text"].hasDatepicker,
+#main.basic-form-page .content form select.hasDatepicker {
+  width: 150px;
+  margin-right: 20px;
+}
+/* line 143, ../sass/basic-form.scss */
+#main.basic-form-page .content form .form-left {
+  width: 280px;
+  padding: 0 5px;
+  float: left;
+  padding-left: 0;
+}
+/* line 147, ../sass/basic-form.scss */
+#main.basic-form-page .content form .form-right {
+  width: 280px;
+  padding: 0 5px;
+  float: left;
+  padding-right: 0;
+  margin-left: 30px;
+}
+/* line 152, ../sass/basic-form.scss */
+#main.basic-form-page .content form .add-field {
+  color: #ff6917;
+  font-size: 13px;
+  font-style: italic;
+  text-decoration: underline;
+}
+/* line 157, ../sass/basic-form.scss */
+#main.basic-form-page .content form .add-field:hover {
+  text-decoration: none;
+}
+/* line 161, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history {
+  padding-bottom: 15px;
+}
+/* line 163, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history input[type="text"] {
+  float: none;
+  width: 100%;
+}
+/* line 167, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-headers {
+  zoom: 1;
+  background: #f7cb4e;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+  font-size: 15px;
+}
+/* line 6, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .journey-history .journey-history-headers:after, #main.basic-form-page .content form .journey-history .journey-history-headers:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .journey-history .journey-history-headers:after {
+  clear: both;
+}
+/* line 175, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .history-row {
+  zoom: 1;
+  padding: 8px 10px;
+}
+/* line 6, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .journey-history .history-row:after, #main.basic-form-page .content form .journey-history .history-row:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+#main.basic-form-page .content form .journey-history .history-row:after {
+  clear: both;
+}
+/* line 178, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .history-row.odd {
+  background: #fff;
+}
+/* line 182, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-location {
+  float: left;
+  width: 225px;
+  padding-right: 20px;
+}
+/* line 187, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-date {
+  float: left;
+  width: 170px;
+  padding-right: 20px;
+  position: relative;
+}
+/* line 192, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-date input {
+  width: 150px;
+  margin-right: 0;
+}
+/* line 197, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-actions {
+  margin-left: 10px;
+  float: left;
+  color: #e0e2e3;
+  font-size: 13px;
+}
+/* line 202, ../sass/basic-form.scss */
+#main.basic-form-page .content form .journey-history .journey-history-actions a {
+  color: #ff6917;
+  font-style: italic;
+}

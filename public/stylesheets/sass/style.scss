@@ -3,7 +3,8 @@
         "common-mixins",
         "font-faces",
         "grid",
-        "sassy-buttons";
+        "sassy-buttons",
+        "breadcrumbs";
 
 //lets change the box model to what makes sense :)
 * {
@@ -119,6 +120,12 @@ p {
 
 #main {
     @include clearfix;
+    clear: both;
+    .content-wrapper {
+        @include col($cols: 24);
+        @include col-first;
+        @include col-last;        
+    }
     .content {
         @include col($cols: 16);
         @include col-first;
@@ -129,12 +136,6 @@ p {
         @include col-last;
         padding-left: 20px;
     }    
-}
-
-.breadcrumbs {
-    font-family: $header-font;
-    font-size: 12px;
-    text-transform: uppercase;
 }
 
 .header-large {
@@ -159,11 +160,21 @@ h4 {
 }
 
 .stripes {
-    background: url(../../images/bg-stripe-blue.png) top left repeat;
+    background-image: url(../../images/bg-stripe-blue.png);
+    background-position: top left;
+    background-repeat: repeat;    
+}
+
+.stripes-dark {
+    background-image: url(../../images/bg-stripe-dark-blue.png);
+    background-position: top left;
+    background-repeat: repeat;    
 }
 
 .stripes-secondary {
-    background: url(../../images/bg-stripe-grey.png) top left repeat;
+    background-image: url(../../images/bg-stripe-grey.png);
+    background-position: top left;
+    background-repeat: repeat;
 }
 
 .highlight-header {

@@ -71,7 +71,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 9, ../sass/style.scss */
+/* line 1, ../sass/_breadcrumbs.scss */
+.breadcrumbs {
+  font-family: "Rokkitt", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 5, ../sass/_breadcrumbs.scss */
+.breadcrumbs li {
+  display: inline;
+}
+/* line 7, ../sass/_breadcrumbs.scss */
+.breadcrumbs li:after {
+  content: ">";
+  padding-left: 3px;
+}
+/* line 11, ../sass/_breadcrumbs.scss */
+.breadcrumbs li:last-child:after {
+  content: none;
+  padding: 0;
+}
+/* line 15, ../sass/_breadcrumbs.scss */
+.breadcrumbs li a {
+  color: #020202;
+}
+
+/* line 10, ../sass/style.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -79,7 +104,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-/* line 13, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 body {
   width: 960px;
   margin: 0 auto;
@@ -88,7 +113,7 @@ body {
   font-size: 14px;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 h1,
 h2,
 h3,
@@ -100,17 +125,17 @@ h6 {
   font-weight: bold;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 a {
   color: #1583ab;
   text-decoration: none;
 }
-/* line 35, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 input[type="password"],
 input[type="text"],
 textarea {
@@ -119,20 +144,20 @@ textarea {
   margin-bottom: 8px;
   vertical-align: top;
 }
-/* line 47, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 input[type="password"].placeholder,
 input[type="text"].placeholder,
 textarea.placeholder {
   color: #aaa;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 input[type="submit"],
 button {
   vertical-align: top;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .custom-select {
   display: inline-block;
   width: 145px;
@@ -140,7 +165,7 @@ button {
   overflow: hidden;
   background: url(../../images/icon-drop-down.png) 97% center no-repeat;
 }
-/* line 63, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .custom-select select {
   width: 170px;
   padding: 5px;
@@ -151,7 +176,7 @@ button {
   height: 26px;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .button-primary {
   font-size: 11px;
   padding: 4px 3px;
@@ -205,7 +230,7 @@ button {
   box-shadow: none;
 }
 
-/* line 81, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .button-primary-icon {
   font-size: 11px;
   padding: 4px 3px;
@@ -259,7 +284,7 @@ button {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 87, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .button-primary-icon .search-button {
   background: url(../../images/icon-search.png) transparent center center no-repeat;
   height: 28px;
@@ -271,19 +296,19 @@ button {
   line-height: normal !important;
 }
 
-/* line 101, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .lt-ie8 .button-primary-icon {
   width: 28px;
   height: 28px;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .lt-ie8 .button-primary-icon .search-button {
   display: block;
   font-size: 0;
   line-height: 0 !important;
 }
 
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 p {
   line-height: 20px;
 }
@@ -576,9 +601,10 @@ p {
   font-weight: normal;
 }
 
-/* line 120, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 #main {
   zoom: 1;
+  clear: both;
 }
 /* line 6, ../sass/_common-mixins.scss */
 #main:after, #main:before {
@@ -589,14 +615,22 @@ p {
 #main:after {
   clear: both;
 }
-/* line 122, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
+#main .content-wrapper {
+  width: 960px;
+  padding: 0 5px;
+  float: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 129, ../sass/style.scss */
 #main .content {
   width: 640px;
   padding: 0 5px;
   float: left;
   padding-left: 0;
 }
-/* line 127, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #main .side-content {
   width: 320px;
   padding: 0 5px;
@@ -605,14 +639,7 @@ p {
   padding-left: 20px;
 }
 
-/* line 134, ../sass/style.scss */
-.breadcrumbs {
-  font-family: "Rokkitt", serif;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/* line 140, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .header-large {
   font-family: "BebasNeueRegular", sans-serif, serif, Helvetica;
   font-size: 70px;
@@ -621,13 +648,13 @@ p {
   font-weight: normal;
 }
 
-/* line 148, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .subheader {
   font-size: 30px;
   font-weight: normal;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .section-header,
 h4 {
   font-family: "Rokkitt", serif;
@@ -636,21 +663,32 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 161, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 .stripes {
-  background: url(../../images/bg-stripe-blue.png) top left repeat;
+  background-image: url(../../images/bg-stripe-blue.png);
+  background-position: top left;
+  background-repeat: repeat;
 }
 
-/* line 165, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
+.stripes-dark {
+  background-image: url(../../images/bg-stripe-dark-blue.png);
+  background-position: top left;
+  background-repeat: repeat;
+}
+
+/* line 174, ../sass/style.scss */
 .stripes-secondary, .header .navigation-wrapper:after, .footer:after, .highlight-header {
-  background: url(../../images/bg-stripe-grey.png) top left repeat;
+  background-image: url(../../images/bg-stripe-grey.png);
+  background-position: top left;
+  background-repeat: repeat;
 }
 
-/* line 169, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .highlight-header {
   margin-bottom: 10px;
 }
-/* line 172, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .highlight-header span {
   background: #fff;
   color: #020202;
@@ -659,7 +697,7 @@ h4 {
   padding-right: 7px;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .tag-yellow {
   position: relative;
   border: 1px solid #cccccc;
@@ -699,7 +737,7 @@ h4 {
   margin-top: -8px;
 }
 
-/* line 185, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .tag-orange {
   position: relative;
   border: 1px solid #cccccc;
@@ -739,7 +777,7 @@ h4 {
   margin-top: -8px;
 }
 
-/* line 189, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .tag-green {
   position: relative;
   border: 1px solid #cccccc;

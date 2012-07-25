@@ -1,0 +1,19 @@
+.breadcrumbs {
+    font-family: $header-font;
+    font-size: 12px;
+    text-transform: uppercase;
+	li {
+		display: inline;
+		&:after {
+			content: ">";
+			padding-left: 3px;
+		}
+		&:last-child:after {
+			content: none;
+			padding: 0;
+		}
+		a {
+			color: $body-color;
+		}
+	}
+}
