@@ -1,0 +1,210 @@
+@import "variables",
+        "common-mixins",
+        "font-faces",
+        "grid",
+        "sassy-buttons";
+
+#main.basic-form-page {
+	.content-wrapper {
+		border-top: 1px dotted $border-color;
+		background: #e7f1f5;
+
+	}
+
+	.side-content {
+		@include col($cols: 5);
+		@include col-first;
+		ul {	
+			margin-top: 20px;	
+			font-family: $secondary-font;
+			li {
+				overflow: visible;
+			}
+			a {
+				display: block;
+				padding-left: 30px;
+				line-height: 35px;
+				color: $body-color;		
+				font-size: 18px;		
+			}
+			a.highlight {
+				@include css-pointer($side : right, $border-color : #1583ab, $background-color : #1583ab, $border-width : 1px, $size : 18px, $color: #fff);
+				&:hover {
+					text-decoration: none;
+				}				
+			}
+		}
+	}
+	.content {
+		@include col($cols: 19);
+		@include col-last;
+		padding-left: 30px;
+		padding-top: 40px;
+		background: #e0edf2;
+		margin-bottom: 70px;
+
+		form {
+			@include clearfix;
+			fieldset {
+				@include col($cols: 15);
+				@include col-first;
+				@include col-last;
+				padding-bottom: 15px;
+				padding-top: 9px;
+			}
+
+			p {
+				padding-bottom: 10px;
+			}
+
+			//yeah fuck you legend and your styling piece of shit
+			.legend-fix {
+				@include clearfix;
+				margin-top: 40px;
+			}
+
+			legend {
+				display: block;
+				width: 100%;	
+				position: relative;
+				height: 0;
+				overflow: visible;
+
+				div {					
+					height: 23px;
+					padding: 3px 0 0 30px;
+					margin-bottom: 17px;
+					position: relative;
+					top: 10px;
+					&.user-info-icon {
+						background: url(../../images/img-form-sprites.png) 0px 0px no-repeat;
+					}				
+					&.journey-info-icon {
+						background: url(../../images/img-form-sprites.png) 0px -46px no-repeat;
+					}				
+					&.history-info-icon {
+						background: url(../../images/img-form-sprites.png) 0px -23px no-repeat;
+					}												
+					.stripes-dark { 
+						display: block;
+						color: $body-color;
+						span {
+							background: #e0edf2;
+							display: inline-block;
+							font-family: $header-font;
+							font-size: 17px;
+							text-transform: uppercase;					
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+			.field-wrapper {
+				@include clearfix;
+				padding-bottom: 8px;
+				position: relative;
+			}
+			.nationality-hidden,
+			.f-family-hidden,
+			.m-family-hidden {
+				display: none;
+			}
+			label {
+				font-family: $header-font;
+				font-weight: bold;
+				font-size: 15px;
+				float: left;
+				display: block;
+				line-height: 26px;
+				&.datepicker-icon {
+					background: url(../../images/icon-datepicker.png);
+					width: 17px;
+					height: 16px;
+					float: none;
+					line-height: 0;
+					position: absolute;
+					top: 5px;
+					right: 0;
+				}
+			}
+			input[type = "text"], 
+			select {
+				float: right;
+				width: 170px;
+				margin-bottom: 0;
+				&.history-input-sm {
+					width: 135px;	
+				}
+				&.hasDatepicker {
+					width: 150px; 
+					margin-right: 20px;
+				}
+			}			
+			.form-left {
+				@include col($cols: 7);
+				@include col-first;
+			}
+			.form-right {
+				@include col($cols: 7);
+				@include col-last;
+				margin-left: 30px;
+			}	
+			.add-field {
+				color: $header-color-tertiary;
+				font-size: 13px;
+				font-style: italic;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			.journey-history {
+				padding-bottom: 15px;
+				input[type = "text"] {
+					float: none;
+					width: 100%;
+				}
+				.journey-history-headers {
+					@include clearfix;
+					background: #f7cb4e;
+					color: #fff;
+					font-weight: bold;
+					padding: 8px 10px;
+					font-size: 15px;
+				}
+				.history-row {
+					@include clearfix;
+					padding: 8px 10px;
+					&.odd {
+						background: #fff;
+					}
+				}
+				.journey-history-location {
+					float: left;
+					width: 225px;
+					padding-right: 20px;
+				}
+				.journey-history-date {
+					float: left;
+					width: 170px;
+					padding-right: 20px;
+					position: relative;
+					input {
+						width: 150px;
+						margin-right: 0;
+					}
+				}
+				.journey-history-actions {
+					margin-left: 10px;
+					float: left;
+					color: #e0e2e3;
+					font-size: 13px;
+					a {
+						color: $header-color-tertiary;
+						font-style: italic;						
+					}
+				}
+			}		
+		}
+	}
+}

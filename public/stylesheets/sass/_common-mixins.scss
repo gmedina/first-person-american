@@ -19,7 +19,7 @@
      box-sizing:        $box-sizing;
 }
 
-@mixin css-pointer-left ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
+@mixin css-pointer ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
     $side: getPointerSide($side);
     $centerSide: getPointerCenterSide($side);
     $sizeOffset: getBorderWidthSizeOffset($size, $border-width);
@@ -56,7 +56,7 @@
 }
 
 @mixin tag-creator ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
-    @include css-pointer-left($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color);
+    @include css-pointer($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color);
     padding: 0 3px; 
     margin-right: 9px;
     font-weight: bold;

@@ -18,12 +18,21 @@ $(document).ready(function() {
 			$("#main").after(html);
 		}
 	}, {
-		relativeURL : "stories.html",
-		id : "tmp-stories",
+	// }, {
+	// 	relativeURL : "stories.html",
+	// 	id : "tmp-stories",
+	// 	model : {},
+	// 	callback : function(tmp) {
+	// 		var html = Mustache.to_html(tmp, this.model);
+	// 		$("#main").html(html);
+	// 	}
+	// }, {
+		relativeURL : "basic-form.html",
+		id : "tmp-basic",
 		model : {},
 		callback : function(tmp) {
 			var html = Mustache.to_html(tmp, this.model);
-			$("#main").html(html);
+			$("#main").html(html);			
 		}
 	}];
 

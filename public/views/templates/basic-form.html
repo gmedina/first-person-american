@@ -1,0 +1,204 @@
+<script id="tmp-basic" type="text/x-mustache-tmpl">
+  <div class="page-header">
+    <ul class="breadcrumbs">
+      <li><a href="">Be a First Person</a></li>
+      <li><a href="">I'm an immigrant</a></li>
+      <li><a href="">Basic Info</a></li>
+    </ul>
+    <h2 class="header-large">Basic Info</h2>  
+  </div>
+  <div class="content-wrapper">
+    <div class="side-content">
+      <ul>
+        <li><a class="highlight" href="">1. Basic Info</a>
+        <li><a href="">2. Photo Memories</a>
+        <li><a href="">3. Description</a>
+        <li><a href="">4. What's your story?</a>
+        <li><a href="">5. Publish</a>
+      </ul>
+    </div>
+    <div class="content">
+      <form id="basic-info" name="basic-info">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat tempus varius. Sed sagittis lorem vitae justo fringilla ut iaculis risus condimentum. Vestibulum sed viverra lectus. Nam et velit ipsum. Fusce placerat lorem in risus tristique ut facilisis eros auctor. Mauris vulputate viverra nisi, vitae eleifend velit semper feugiat. Suspendisse sit amet mauris id lorem consequat volutpat.
+        </p>      
+        <fieldset>
+          <legend>
+            <div class="user-info-icon">
+              <h6 class="stripes-dark">
+                <span>About You</span>
+              </h6>
+            </div>
+          </legend>
+          <div class="legend-fix">
+            <div class="form-left">
+              <div class="field-wrapper">
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" name="full-name" />
+              </div>
+              <div class="field-wrapper">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender">
+                  <option>Female</option>
+                  <option>Male</option>
+                </select>             
+              </div>
+              <div class="field-wrapper">
+                <label for="birthdate">Birthdate *</label>
+                <label for="birthdate" class="datepicker-icon"></label>
+                <input type="text" id="birthdate" name="birthdate" data-role="datepicker" />
+              </div>
+            </div>
+            <div class="form-right">
+              <div class="field-wrapper">
+                <label for="birthplace">Birthplace *</label>
+                <input type="text" id="birthplace" name="birthplace" />
+              </div>
+              <div class="field-wrapper">
+                <label for="nationality">Nationality *</label>        
+                <input type="text" id="nationality" name="nationality" />
+              </div>  
+              <div class="field-wrapper nationality-hidden">
+                <label for="nationality-2">Nationality *</label>        
+                <input type="text" id="nationality-2" name="nationality-2" />
+              </div>                
+              <a class="add-field fade-toggle" data-field="nationality-hidden" data-toggle-text="- Remove Nationality" href="">+ Add Another Nationality</a>
+            </div>
+          </div>
+        </fieldset> 
+        <fieldset class="stripes">
+          <legend>
+            <div class="history-info-icon">
+              <h6 class="stripes-dark">
+                <span>Family History</span>
+              </h6>
+            </div>
+          </legend> 
+          <div class="legend-fix">      
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat tempus varius. Sed sagittis lorem vitae justo 
+            </p>
+            <div class="form-left">
+              <div class="field-wrapper">
+                <label for="father-ethnicity">Dad's Ethnicity</label>
+                <input type="text" id="father-ethnicity" name="father-ethnicity" />
+              </div>
+              <div class="field-wrapper">
+                <label for="f-grandmother-ethnicity">Grandma's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="f-grandmother-ethnicity" name="f-grandmother-ethnicity" />
+              </div>
+              <div class="field-wrapper">
+                <label for="f-grandfather-ethnicity">Grandpa's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="f-grandfather-ethnicity" name="f-grandfather-ethnicity" />
+              </div>
+              <div class="field-wrapper f-family-hidden">
+                <label for="f-greatgrandmother-ethnicity">Greatgrandma's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="f-greatgrandmother-ethnicity" name="f-greatgrandmother-ethnicity" />
+              </div>
+              <div class="field-wrapper f-family-hidden">
+                <label for="f-greatgrandfather-ethnicity">Greatgrandpa's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="f-greatgrandfather-ethnicity" name="f-greatgrandfather-ethnicity" />
+              </div>                 
+              <a class="add-field fade-toggle" data-field="f-family-hidden" data-toggle-text="- Remove Greatgrandparents" href="">+ Add Greatgrandparents</a>
+            </div>
+            <div class="form-right">
+              <div class="field-wrapper">
+                <label for="mother-ethnicity">Mom's Ethnicity</label>
+                <input type="text" id="mother-ethnicity" name="mother-ethnicity" />
+              </div>
+              <div class="field-wrapper">
+                <label for="m-grandmother-ethnicity">Grandma's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="m-grandmother-ethnicity" name="m-grandmother-ethnicity" />
+              </div>
+              <div class="field-wrapper">
+                <label for="m-grandfather-ethnicity">Grandpa's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="m-grandfather-ethnicity" name="m-grandfather-ethnicity" />
+              </div>
+              <div class="field-wrapper m-family-hidden">
+                <label for="m-greatgrandmother-ethnicity">Greatgrandma's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="m-greatgrandmother-ethnicity" name="m-greatgrandmother-ethnicity" />
+              </div>
+              <div class="field-wrapper m-family-hidden">
+                <label for="m-greatgrandfather-ethnicity">Greatgrandpa's Ethnicity</label>
+                <input class="history-input-sm" type="text" id="m-greatgrandfather-ethnicity" name="m-greatgrandfather-ethnicity" />
+              </div>              
+              <a class="add-field fade-toggle" data-field="m-family-hidden" data-toggle-text="- Remove Greatgrandparents" href="">+ Add Greatgrandparents</a>
+            </div>
+          </div>
+        </fieldset> 
+        <fieldset>
+          <legend>
+            <div class="journey-info-icon">
+              <h6 class="stripes-dark">
+                <span>Family Journey</span>
+              </h6>
+            </div>
+          </legend>       
+          <div class="legend-fix">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat tempus varius. Sed sagittis lorem vitae justo 
+            </p>  
+            <div class="journey-history">
+              <div class="journey-history-headers">
+                <div class="journey-history-location">
+                  Location
+                </div>
+                <div class="journey-history-date">
+                  Date
+                </div>
+              </div>
+              <div class="history-info">
+                <div class="history-row odd">
+                  <div class="journey-history-location">
+                    Bogota, Colombia
+                  </div>
+                  <div class="journey-history-date">
+                    January 17, 2002
+                  </div>  
+                  <div class="journey-history-actions">
+                    <a href="">Edit</a> | 
+                    <a href="">Delete</a>
+                  </div>                      
+                </div>        
+                <div class="history-row">
+                  <div class="journey-history-location">
+                    Mexico City, Mexico
+                  </div>  
+                  <div class="journey-history-date">
+                    August 17, 2002
+                  </div>      
+                  <div class="journey-history-actions">
+                    <a href="">Edit</a> | 
+                    <a href="">Delete</a>
+                  </div>                                            
+                </div>        
+                <div class="history-row odd">
+                  <div class="journey-history-location">
+                    Bogota, Colombia
+                  </div>
+                  <div class="journey-history-date">
+                    January 17, 2002
+                  </div>        
+                  <div class="journey-history-actions">
+                    <a href="">Edit</a> | 
+                    <a href="">Delete</a>
+                  </div>                                          
+                </div>  
+                <div class="history-row">
+                  <div class="journey-history-location">
+                    <input type="text" id="" name="location" />
+                  </div>
+                  <div class="journey-history-date">
+                    <input type="text" id="journey-date-1" name="date" data-role="datepicker" />
+                    <label for="journey-date-1" class="datepicker-icon"></label>
+                  </div>
+                </div>                                      
+              </div>
+            </div>
+            <a class="add-field" href="">+ Add Location</a>
+          </div>      
+        </fieldset>   
+      </form>
+    </div>
+  </div>
+</script>
