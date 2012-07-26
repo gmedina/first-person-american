@@ -147,57 +147,79 @@
                   Date
                 </div>
               </div>
-              <div class="history-info">
+              <div class="history-info">                
                 <div class="history-row odd">
                   <div class="journey-history-location">
-                    Bogota, Colombia
+                    <span class="editable-info">Bogota, Colombia</span>
+                    <input type="text" id="" name="location" class="hidden-info"/>
                   </div>
                   <div class="journey-history-date">
-                    January 17, 2002
+                    <span class="editable-info">January 17, 2002</span>
+                    <input type="text" id="journey-date-1" name="date" class="hidden-info" data-role="datepicker" />
+                    <label for="journey-date-1" class="datepicker-icon hidden-info"></label>                                        
                   </div>  
                   <div class="journey-history-actions">
-                    <a href="">Edit</a> | 
-                    <a href="">Delete</a>
+                    <a class="edit" href="">Edit</a>
+                    <a class="cancel hidden-info" href="">Cancel</a>
+                    <a class="delete" href="">Delete</a>
                   </div>                      
                 </div>        
                 <div class="history-row">
                   <div class="journey-history-location">
-                    Mexico City, Mexico
+                    <span class="editable-info">Mexico City, Mexico</span>
+                    <input type="text" id="" name="location" class="hidden-info"/>
                   </div>  
                   <div class="journey-history-date">
-                    August 17, 2002
+                    <span class="editable-info">January 17, 2002</span>
+                    <input type="text" id="journey-date-2" name="date" class="hidden-info" data-role="datepicker" />
+                    <label for="journey-date-2" class="datepicker-icon hidden-info"></label>                                        
                   </div>      
                   <div class="journey-history-actions">
-                    <a href="">Edit</a> | 
-                    <a href="">Delete</a>
+                    <a class="edit" href="">Edit</a>
+                    <a class="cancel hidden-info" href="">Cancel</a>
+                    <a class="delete" href="">Delete</a>
                   </div>                                            
                 </div>        
                 <div class="history-row odd">
                   <div class="journey-history-location">
-                    Bogota, Colombia
+                    <span class="editable-info">Bogota, Colombia</span>
+                    <input type="text" id="" name="location" class="hidden-info"/>
                   </div>
                   <div class="journey-history-date">
-                    January 17, 2002
+                    <span class="editable-info">January 17, 2002</span>
+                    <input type="text" id="journey-date-3" name="date" class="hidden-info" data-role="datepicker" />
+                    <label for="journey-date-3" class="datepicker-icon hidden-info"></label>                    
                   </div>        
                   <div class="journey-history-actions">
-                    <a href="">Edit</a> | 
-                    <a href="">Delete</a>
+                    <a class="edit" href="">Edit</a>
+                    <a class="cancel hidden-info" href="">Cancel</a>
+                    <a class="delete" href="">Delete</a>                  
                   </div>                                          
-                </div>  
-                <div class="history-row">
+                </div>                                  
+              </div>
+              <div class="history-row template">
                   <div class="journey-history-location">
-                    <input type="text" id="" name="location" />
+                    <span class="hidden-info"></span>
+                    <input type="text" id="" name="location"/>
                   </div>
                   <div class="journey-history-date">
-                    <input type="text" id="journey-date-1" name="date" data-role="datepicker" />
-                    <label for="journey-date-1" class="datepicker-icon"></label>
-                  </div>
-                </div>                                      
-              </div>
+                    <span class="hidden-info"></span>
+                    <input type="text" id="" name="date" data-role="datepicker" />
+                    <label for="" class="datepicker-icon"></label>                                        
+                  </div>  
+                  <div class="journey-history-actions">
+                    <a class="edit hidden-info" href="">Edit</a>
+                    <a class="cancel hidden-info" href="">Cancel</a>
+                    <a class="delete hidden-info" href="">Delete</a>
+                  </div>                      
+                </div>  
             </div>
-            <a class="add-field" href="">+ Add Location</a>
+            <a class="add-field add-location" href="">+ Add Location</a>
           </div>      
         </fieldset>   
+        <fieldset>
+            <input type="submit" value="Save &amp; Continue" class="button-primary-large" />
+        </fieldset>        
       </form>
     </div>
   </div>

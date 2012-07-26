@@ -56,6 +56,10 @@
 				}
 			}
 
+			.hidden-info {
+				display: none;
+			}
+
 			p {
 				padding-bottom: 10px;
 			}
@@ -178,8 +182,12 @@
 				.history-row {
 					@include clearfix;
 					padding: 8px 10px;
+					line-height: 26px;
 					&.odd {
 						background: #fff;
+					}
+					&.template {
+						display: none;
 					}
 				}
 				.journey-history-location {
