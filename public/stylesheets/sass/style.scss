@@ -79,6 +79,13 @@ button {
     line-height: normal !important;
 }
 
+.button-primary-large {
+    @include sassy-button("matte", 0px, 13px, #ff812a, #ff6616, #fff);
+    font-family: $body-font;
+    font-weight: bold;
+    line-height: normal !important;    
+}
+
 .button-primary-icon {
     @include sassy-button("matte", 0px, 11px, #1893b5, #1582aa, #fff);
     font-family: $body-font;

@@ -104,11 +104,15 @@
   padding-bottom: 15px;
   padding-top: 9px;
 }
-/* line 56, ../sass/basic-form.scss */
+/* line 54, ../sass/basic-form.scss */
+#main.basic-form-page .content form fieldset input[type="submit"] {
+  float: right;
+}
+/* line 59, ../sass/basic-form.scss */
 #main.basic-form-page .content form p {
   padding-bottom: 10px;
 }
-/* line 61, ../sass/basic-form.scss */
+/* line 64, ../sass/basic-form.scss */
 #main.basic-form-page .content form .legend-fix {
   zoom: 1;
   margin-top: 40px;
@@ -122,7 +126,7 @@
 #main.basic-form-page .content form .legend-fix:after {
   clear: both;
 }
-/* line 66, ../sass/basic-form.scss */
+/* line 69, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend {
   display: block;
   width: 100%;
@@ -130,7 +134,7 @@
   height: 0;
   overflow: visible;
 }
-/* line 73, ../sass/basic-form.scss */
+/* line 76, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div {
   height: 23px;
   padding: 3px 0 0 30px;
@@ -138,24 +142,24 @@
   position: relative;
   top: 10px;
 }
-/* line 79, ../sass/basic-form.scss */
+/* line 82, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div.user-info-icon {
   background: url(../../images/img-form-sprites.png) 0px 0px no-repeat;
 }
-/* line 82, ../sass/basic-form.scss */
+/* line 85, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div.journey-info-icon {
   background: url(../../images/img-form-sprites.png) 0px -46px no-repeat;
 }
-/* line 85, ../sass/basic-form.scss */
+/* line 88, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div.history-info-icon {
   background: url(../../images/img-form-sprites.png) 0px -23px no-repeat;
 }
-/* line 88, ../sass/basic-form.scss */
+/* line 91, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div .stripes-dark {
   display: block;
   color: #020202;
 }
-/* line 91, ../sass/basic-form.scss */
+/* line 94, ../sass/basic-form.scss */
 #main.basic-form-page .content form legend div .stripes-dark span {
   background: #e0edf2;
   display: inline-block;
@@ -164,7 +168,7 @@
   text-transform: uppercase;
   padding-right: 10px;
 }
-/* line 102, ../sass/basic-form.scss */
+/* line 105, ../sass/basic-form.scss */
 #main.basic-form-page .content form .field-wrapper {
   zoom: 1;
   padding-bottom: 8px;
@@ -179,13 +183,13 @@
 #main.basic-form-page .content form .field-wrapper:after {
   clear: both;
 }
-/* line 109, ../sass/basic-form.scss */
+/* line 112, ../sass/basic-form.scss */
 #main.basic-form-page .content form .nationality-hidden,
 #main.basic-form-page .content form .f-family-hidden,
 #main.basic-form-page .content form .m-family-hidden {
   display: none;
 }
-/* line 112, ../sass/basic-form.scss */
+/* line 115, ../sass/basic-form.scss */
 #main.basic-form-page .content form label {
   font-family: "Rokkitt", serif;
   font-weight: bold;
@@ -194,7 +198,7 @@
   display: block;
   line-height: 26px;
 }
-/* line 119, ../sass/basic-form.scss */
+/* line 122, ../sass/basic-form.scss */
 #main.basic-form-page .content form label.datepicker-icon {
   background: url(../../images/icon-datepicker.png);
   width: 17px;
@@ -205,32 +209,32 @@
   top: 5px;
   right: 0;
 }
-/* line 131, ../sass/basic-form.scss */
+/* line 134, ../sass/basic-form.scss */
 #main.basic-form-page .content form input[type="text"],
 #main.basic-form-page .content form select {
   float: right;
   width: 170px;
   margin-bottom: 0;
 }
-/* line 135, ../sass/basic-form.scss */
+/* line 138, ../sass/basic-form.scss */
 #main.basic-form-page .content form input[type="text"].history-input-sm,
 #main.basic-form-page .content form select.history-input-sm {
   width: 135px;
 }
-/* line 138, ../sass/basic-form.scss */
+/* line 141, ../sass/basic-form.scss */
 #main.basic-form-page .content form input[type="text"].hasDatepicker,
 #main.basic-form-page .content form select.hasDatepicker {
   width: 150px;
   margin-right: 20px;
 }
-/* line 143, ../sass/basic-form.scss */
+/* line 146, ../sass/basic-form.scss */
 #main.basic-form-page .content form .form-left {
   width: 280px;
   padding: 0 5px;
   float: left;
   padding-left: 0;
 }
-/* line 147, ../sass/basic-form.scss */
+/* line 150, ../sass/basic-form.scss */
 #main.basic-form-page .content form .form-right {
   width: 280px;
   padding: 0 5px;
@@ -238,27 +242,27 @@
   padding-right: 0;
   margin-left: 30px;
 }
-/* line 152, ../sass/basic-form.scss */
+/* line 155, ../sass/basic-form.scss */
 #main.basic-form-page .content form .add-field {
   color: #ff6917;
   font-size: 13px;
   font-style: italic;
   text-decoration: underline;
 }
-/* line 157, ../sass/basic-form.scss */
+/* line 160, ../sass/basic-form.scss */
 #main.basic-form-page .content form .add-field:hover {
   text-decoration: none;
 }
-/* line 161, ../sass/basic-form.scss */
+/* line 164, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history {
   padding-bottom: 15px;
 }
-/* line 163, ../sass/basic-form.scss */
+/* line 166, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history input[type="text"] {
   float: none;
   width: 100%;
 }
-/* line 167, ../sass/basic-form.scss */
+/* line 170, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-headers {
   zoom: 1;
   background: #f7cb4e;
@@ -276,7 +280,7 @@
 #main.basic-form-page .content form .journey-history .journey-history-headers:after {
   clear: both;
 }
-/* line 175, ../sass/basic-form.scss */
+/* line 178, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .history-row {
   zoom: 1;
   padding: 8px 10px;
@@ -290,36 +294,36 @@
 #main.basic-form-page .content form .journey-history .history-row:after {
   clear: both;
 }
-/* line 178, ../sass/basic-form.scss */
+/* line 181, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .history-row.odd {
   background: #fff;
 }
-/* line 182, ../sass/basic-form.scss */
+/* line 185, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-location {
   float: left;
   width: 225px;
   padding-right: 20px;
 }
-/* line 187, ../sass/basic-form.scss */
+/* line 190, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-date {
   float: left;
   width: 170px;
   padding-right: 20px;
   position: relative;
 }
-/* line 192, ../sass/basic-form.scss */
+/* line 195, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-date input {
   width: 150px;
   margin-right: 0;
 }
-/* line 197, ../sass/basic-form.scss */
+/* line 200, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-actions {
   margin-left: 10px;
   float: left;
   color: #e0e2e3;
   font-size: 13px;
 }
-/* line 202, ../sass/basic-form.scss */
+/* line 205, ../sass/basic-form.scss */
 #main.basic-form-page .content form .journey-history .journey-history-actions a {
   color: #ff6917;
   font-style: italic;
