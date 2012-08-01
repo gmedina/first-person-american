@@ -19,7 +19,7 @@
      box-sizing:        $box-sizing;
 }
 
-@mixin css-pointer ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
+@mixin css-pointer ($side, $border-color, $background-color, $border-width, $size, $color: #000, $position: 50%) {
     $side: getPointerSide($side);
     $centerSide: getPointerCenterSide($side);
     $sizeOffset: getBorderWidthSizeOffset($size, $border-width);
@@ -41,28 +41,40 @@
     }
 
     &:after {
-        #{$centerSide}: 50%;
+        #{$centerSide}: $position;
         border-#{$side}-color: $background-color;
         border-width: $size;
         margin-#{$centerSide}: -$size;                  
     }
 
     &:before {
-        #{$centerSide}: 50%;
+        #{$centerSide}: $position;
         border-#{$side}-color: $border-color;
         border-width: #{$sizeOffset};
         margin-#{$centerSide}: -#{$sizeOffset};
     }   
 }
 
-@mixin tag-creator ($side, $border-color, $background-color, $border-width, $size, $color: #000) {
-    @include css-pointer($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color);
+@mixin tag-creator ($side, $border-color, $background-color, $border-width, $size, $color: #000, $position: 50%) {
+    @include css-pointer($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color, $position: $position);
     padding: 0 3px; 
     margin-right: 9px;
     font-weight: bold;
     font-size: 11px;
+    font-family: $body-font;
     text-transform: uppercase;
     letter-spacing: -.5px;
     line-height: 13px;
     display: inline-block;
+}
+
+@mixin tag-creator-large ($side, $border-color, $background-color, $border-width, $size, $color: #000, $position: 50%) {
+    @include css-pointer($side : $side, $border-color : $border-color, $background-color : $background-color, $border-width : $border-width, $size : $size, $color: $color, $position: $position);
+    padding: 5px; 
+    font-weight: bold;
+    font-size: 23px;
+    font-family: $header-font;
+    display: inline-block;
+    height: 100px;
+    text-transform: uppercase;
 }

@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("../../fonts/bebasneue-webfont.eot");
+  src: url("../../fonts/bebasneue-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/bebasneue-webfont.woff") format("woff"), url("../../fonts/bebasneue-webfont.ttf") format("truetype"), url("../../fonts/bebasneue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 1, ../sass/_search-module.scss */
+.search {
+  padding: 8px;
+  margin: 20px 0;
+}
+/* line 5, ../sass/_search-module.scss */
+.search form div {
+  position: relative;
+}
+/* line 8, ../sass/_search-module.scss */
+.search form legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 12, ../sass/_search-module.scss */
+.search form legend a {
+  font-family: "Open Sans", sans-serif;
+  color: #e33237;
+  font-size: 11px;
+  float: right;
+  text-transform: none;
+}
+/* line 20, ../sass/_search-module.scss */
+.search form label {
+  display: none;
+}
+/* line 23, ../sass/_search-module.scss */
+.search form input[type="text"] {
+  height: 30px;
+  margin-bottom: 0;
+  font-size: 11px;
+  width: 100%;
+}
+/* line 29, ../sass/_search-module.scss */
+.search form .button-primary-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 39, ../sass/_search-module.scss */
+.lt-ie8 .search form input {
+  padding: 0 5px;
+}
+
+/* line 9, ../sass/story.scss */
+.story-page .story-header-container {
+  padding-top: 10px;
+}
+/* line 12, ../sass/story.scss */
+.story-page .story-header-image {
+  float: left;
+  padding: 8px 15px 0 0;
+}
+/* line 16, ../sass/story.scss */
+.story-page .header-large {
+  font-size: 50px;
+  font-family: "Rokkitt", serif;
+}
+/* line 20, ../sass/story.scss */
+.story-page .story-subheader {
+  color: #020202;
+  text-transform: none;
+  font-size: 14px;
+  display: inline;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 27, ../sass/story.scss */
+.story-page .story-tags-container {
+  display: inline;
+}
+/* line 31, ../sass/story.scss */
+.story-page .media {
+  margin-bottom: 15px;
+}
+/* line 43, ../sass/story.scss */
+.story-page .story-details {
+  border-top: 1px dotted #cccccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+/* line 47, ../sass/story.scss */
+.story-page .story-details p {
+  margin: 13px 0;
+}
+/* line 52, ../sass/story.scss */
+.story-page .subheader.stripes {
+  margin-bottom: 15px;
+  line-height: 16px;
+}
+/* line 59, ../sass/story.scss */
+.story-page .memories-container,
+.story-page .q-a-container,
+.story-page .top-5-container {
+  margin: 10px 0 20px;
+}
+/* line 64, ../sass/story.scss */
+.story-page .memories-container ul {
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.story-page .memories-container ul:after, .story-page .memories-container ul:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.story-page .memories-container ul:after {
+  clear: both;
+}
+/* line 66, ../sass/story.scss */
+.story-page .memories-container ul li {
+  float: left;
+  width: 160px;
+  padding: 0 5px;
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 71, ../sass/story.scss */
+.story-page .memories-container ul li:hover {
+  background: url(../../images/bg-stripe-orange.png) top left repeat;
+}
+/* line 75, ../sass/story.scss */
+.story-page .memories-container ul a {
+  display: block;
+  color: #020202;
+}
+/* line 78, ../sass/story.scss */
+.story-page .memories-container ul a:hover {
+  text-decoration: none;
+}
+/* line 82, ../sass/story.scss */
+.story-page .memories-container ul h6 {
+  color: #020202;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 8px 0;
+}
+/* line 88, ../sass/story.scss */
+.story-page .memories-container ul span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  line-height: 18px;
+  padding-left: 18px;
+}
+/* line 94, ../sass/story.scss */
+.story-page .memories-container ul span.memories-location {
+  background: url(../../images/icon-memory-location.png) left center no-repeat;
+}
+/* line 97, ../sass/story.scss */
+.story-page .memories-container ul span.memories-date {
+  background: url(../../images/icon-memory-date.png) left center no-repeat;
+}
+/* line 104, ../sass/story.scss */
+.story-page .q-a-container ul li {
+  zoom: 1;
+  line-height: 20px;
+  padding: 10px 0;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.story-page .q-a-container ul li:after, .story-page .q-a-container ul li:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.story-page .q-a-container ul li:after {
+  clear: both;
+}
+/* line 108, ../sass/story.scss */
+.story-page .q-a-container ul li h6 {
+  width: 200px;
+  padding: 0 5px;
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  height: 100%;
+  color: #020202;
+  font-size: 14px;
+}
+/* line 116, ../sass/story.scss */
+.story-page .q-a-container ul li p {
+  width: 440px;
+  padding: 0 5px;
+  float: left;
+  margin: 0;
+}
+/* line 122, ../sass/story.scss */
+.story-page .top-5-container {
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.story-page .top-5-container:after, .story-page .top-5-container:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.story-page .top-5-container:after {
+  clear: both;
+}
+/* line 124, ../sass/story.scss */
+.story-page .top-5-container .top-5 {
+  width: 320px;
+  padding: 0 5px;
+  float: left;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/* line 128, ../sass/story.scss */
+.story-page .top-5-container .top-5 .top-5-innner-wrapper {
+  zoom: 1;
+}
+/* line 6, ../sass/_common-mixins.scss */
+.story-page .top-5-container .top-5 .top-5-innner-wrapper:after, .story-page .top-5-container .top-5 .top-5-innner-wrapper:before {
+  content: " ";
+  display: table;
+}
+/* line 10, ../sass/_common-mixins.scss */
+.story-page .top-5-container .top-5 .top-5-innner-wrapper:after {
+  clear: both;
+}
+/* line 131, ../sass/story.scss */
+.story-page .top-5-container .top-5 h5 {
+  color: #020202;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+/* line 136, ../sass/story.scss */
+.story-page .top-5-container .top-5 span {
+  float: left;
+  width: 100px;
+}
+/* line 140, ../sass/story.scss */
+.story-page .top-5-container .top-5 ul {
+  float: right;
+  width: 180px;
+  font-size: 12px;
+  line-height: 18px;
+}
+/* line 146, ../sass/story.scss */
+.story-page .top-5-container .top-5 a {
+  clear: right;
+  float: right;
+  color: #e33237;
+  font-size: 12px;
+  width: 180px;
+  line-height: 18px;
+}
+/* line 155, ../sass/story.scss */
+.story-page .top-5-container a {
+  color: #e33237;
+  font-size: 12px;
+}
+/* line 163, ../sass/story.scss */
+.story-page .recent-stories li {
+  margin-bottom: 15px;
+}
+/* line 165, ../sass/story.scss */
+.story-page .recent-stories li a {
+  display: table;
+  width: 100%;
+  max-height: 100px;
+  overflow: hidden;
+  text-decoration: none;
+}
+/* line 171, ../sass/story.scss */
+.story-page .recent-stories li a:hover {
+  background-image: url(../../images/bg-stripe-orange.png);
+  background-position: top left;
+  background-repeat: repeat;
+}
+/* line 176, ../sass/story.scss */
+.story-page .recent-stories li a .recent-story-img {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 180, ../sass/story.scss */
+.story-page .recent-stories li a:hover .recent-story-info {
+  background: url(../../images/bg-quote-white.png) 95% center no-repeat;
+}
+/* line 183, ../sass/story.scss */
+.story-page .recent-stories li a .recent-story-info {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 24px;
+  background: url(../../images/bg-quote-grey.png) 95% center no-repeat;
+}
+/* line 188, ../sass/story.scss */
+.story-page .recent-stories li a .recent-story-info h5 {
+  color: #e33237;
+  font-size: 21px;
+}
+/* line 192, ../sass/story.scss */
+.story-page .recent-stories li a .recent-story-info p {
+  color: #020202;
+  font-size: 17px;
+}
+/* line 196, ../sass/story.scss */
+.story-page .recent-stories li a .recent-story-info .recent-story-follow {
+  color: #e33237;
+  font-size: 12px;
+}
+/* line 203, ../sass/story.scss */
+.story-page .recent-stories a {
+  color: #e33237;
+  font-size: 12px;
+}
+/* line 206, ../sass/story.scss */
+.story-page .recent-stories a.all-stories {
+  color: #ff6917;
+  padding-left: 10px;
+}

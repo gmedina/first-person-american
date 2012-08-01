@@ -55,6 +55,10 @@ button {
     vertical-align: top;
 }
 
+.secondary-color {
+    color: $header-color-secondary;
+}
+
 .custom-select {
     display: inline-block;
     width: 145px;
@@ -136,6 +140,7 @@ p {
     .content {
         @include col($cols: 16);
         @include col-first;
+        @include col-last;        
     }
 
     .side-content {
@@ -169,13 +174,13 @@ h4 {
 .stripes {
     background-image: url(../../images/bg-stripe-blue.png);
     background-position: top left;
-    background-repeat: repeat;    
+    background-repeat: repeat;
 }
 
 .stripes-dark {
     background-image: url(../../images/bg-stripe-dark-blue.png);
     background-position: top left;
-    background-repeat: repeat;    
+    background-repeat: repeat;
 }
 
 .stripes-secondary {
@@ -183,6 +188,18 @@ h4 {
     background-position: top left;
     background-repeat: repeat;
 }
+
+.stripes-tertiary {
+    background-image: url(../../images/bg-stripe-orange.png);
+    background-position: top left;
+    background-repeat: repeat;
+}
+
+.stripes-header {
+    padding-right: 7px;
+    background-color: #fff;    
+}
+
 
 .highlight-header {
     @extend .stripes-secondary;
@@ -197,16 +214,22 @@ h4 {
 }
 
 .tag-yellow {
-    @include tag-creator($side: left, $border-color: #ccc, $background-color: #ffd52b, $border-width: 1px, $size: 7px, $color: #fff);
+    @include tag-creator($side: left, $border-color: #ffd52b, $background-color: #ffd52b, $border-width: 1px, $size: 7px, $color: #fff, $position: 50%);
 }
 
 .tag-orange {
-    @include tag-creator($side: left, $border-color: #ccc, $background-color: $header-color-tertiary, $border-width: 1px, $size: 7px, $color: #fff);
+    @include tag-creator($side: left, $border-color: $header-color-tertiary, $background-color: $header-color-tertiary, $border-width: 1px, $size: 7px, $color: #fff, $position: 50%);
 }
 
 .tag-green {
-    @include tag-creator($side: left, $border-color: #ccc, $background-color: #4fb547, $border-width: 1px, $size: 7px, $color: #fff);
+    @include tag-creator($side: left, $border-color: #4fb547, $background-color: #4fb547, $border-width: 1px, $size: 7px, $color: #fff, $position: 50%);
 }
 
+.tag-orange-large {
+    @include tag-creator-large($side: right, $border-color: $header-color-tertiary, $background-color: $header-color-tertiary, $border-width: 1px, $size: 7px, $color: #fff, $position: 15%);
+}
 
+.tag-green-large {
+    @include tag-creator-large($side: right, $border-color: #20bbab, $background-color: #20bbab, $border-width: 1px, $size: 7px, $color: #fff, $position: 15%);
+}
 
