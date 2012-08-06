@@ -8,6 +8,12 @@
 .story-page {
 	.story-header-container {
 		padding-top: 10px;
+
+		#jump-control-button {
+			float: right;
+			position: relative;
+			top: -5px;
+		}
 	}
 	.story-header-image {
 		float: left;
@@ -20,7 +26,7 @@
 	.story-subheader {
 		color: $body-color;
 		text-transform: none;
-		font-size: 14px;
+		font-size: 13px;
 		display: inline;
 		font-family: $body-font;
 	}

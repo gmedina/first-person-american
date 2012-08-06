@@ -20,6 +20,7 @@
 
   	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:400italic,600italic,700italic,400,700,600">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/ui-lightness/jquery-ui-1.8.22.custom.css">
   	<link rel="stylesheet" type="text/css" href="../stylesheets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/css/story.css">
     <!--[if lt IE 9 ]>
@@ -76,15 +77,24 @@
         <h4 class="story-subheader">
           From Seoul, Korea to Brooklyn
         </h4>
+        <select id="jump-control" class="styled-select">
+          <option disabled="disabled">Jump to...</option>
+          <option value="video-scroll-to">Video</option>
+          <option value="your-story-scroll-to">What's your story?</option>
+          <option value="map-scroll-to">Family history</option>
+          <option value="memories-scroll-to">Memories</option>
+          <option value="q-a-scroll-to">Q & A</option>
+          <option value="top-5-scroll-to">Top 5's</option>
+        </select>
       </div>
       <div class="story-details">
-        <div class="story-video media">
+        <div class="video-scroll-to story-video media">
           TO IMPLEMENT -> VIDEO
         </div>
-        <h3 class="subheader stripes">
+        <h3 class="subheader stripes your-story-scroll-to">
           <span class="stripes-header">What's Your Story?</span>
         </h3>
-        <div>
+        <div class="your-story-container">
           <p>
             When Soo Yun Yun was growing up in Seoul, she loved watching the movie My Own Private Idaho, and fell in love with the notion of one day living in Idaho (which is ironic, given that the movie has very little to do with the actual state).
           </p>
@@ -95,13 +105,13 @@
   Soo Yun talks about her experience with being an exchange student at a host family in Lewiston, Idaho, the isolation she felt during her undergraduate years at Bellhaven College in Jackson Mississipi in 2003, and now, how being a New Yorker now has changed her perspective. 
           </p>
         </div>
-        <h3 class="subheader stripes">
+        <h3 class="subheader stripes map-scroll-to">
           <span class="stripes-header">Family History</span>
         </h3> 
         <div class="story-map media">
           TO IMPLEMENT --> MAP
         </div>
-        <h3 class="subheader stripes">
+        <h3 class="subheader stripes memories-scroll-to">
           <span class="stripes-header">Memories</span>
         </h3>
         <div class="memories-container">
@@ -140,7 +150,7 @@
             </li>                                    
           </ul>
         </div>
-        <h3 class="subheader stripes">
+        <h3 class="subheader stripes q-a-scroll-to">
           <span class="stripes-header">Q&A</span>
         </h3> 
         <div class="q-a-container">
@@ -165,7 +175,7 @@
             </li>
           </ul>
         </div>
-        <h3 class="subheader stripes">
+        <h3 class="subheader stripes top-5-scroll-to">
           <span class="stripes-header">Top 5's</span>
         </h3>  
         <div class="top-5-container">
@@ -303,7 +313,10 @@
 <!-- end footer -->
   	
     <script src="../javascripts/jquery.1.7.2.js"></script>
+    <script src="../javascripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script src="../javascripts/plugins/jquery.placeholder.min.js"></script>
+    <script src="../javascripts/plugins/jquery.ui.selectmenu.js"></script>
+    <script src="../javascripts/fpa.js"></script>
 
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

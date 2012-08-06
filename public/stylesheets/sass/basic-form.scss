@@ -51,7 +51,8 @@
 				@include col-last;
 				padding-bottom: 15px;
 				padding-top: 9px;
-				input[type="submit"] {
+				input[type="submit"],
+				.ui-selectmenu {
 					float: right;
 				}
 			}

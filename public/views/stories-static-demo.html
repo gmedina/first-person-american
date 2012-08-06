@@ -20,6 +20,7 @@
 
   	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:400italic,600italic,700italic,400,700,600">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/ui-lightness/jquery-ui-1.8.22.custom.css">
   	<link rel="stylesheet" type="text/css" href="../stylesheets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/css/stories.css">
     <!--[if lt IE 9 ]>
@@ -94,13 +95,11 @@
           </div>
           <div class="filter-wrapper">
             <label>Sort by</label>
-            <span class="custom-select">
-              <select name="filter">
-                <option>Featured</option>
-                <option>Newcommers HS</option>
-                <option>Welcoming Stories</option>
-              </select>
-            </span>
+            <select name="filter">
+              <option>Featured</option>
+              <option>Newcommers HS</option>
+              <option>Welcoming Stories</option>
+            </select>
           </div>
         </div>
         <ul class="stories">
@@ -285,7 +284,10 @@
 <!-- end footer -->
   	
     <script src="../javascripts/jquery.1.7.2.js"></script>
+    <script src="../javascripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script src="../javascripts/plugins/jquery.placeholder.min.js"></script>
+    <script src="../javascripts/plugins/jquery.ui.selectmenu.js"></script>
+    <script src="../javascripts/fpa.js"></script>
 
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

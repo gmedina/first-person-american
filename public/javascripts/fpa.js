@@ -116,6 +116,24 @@ var FPA = {
 		//basic information form
 		FPA.common.datepicker($(".history-info input[data-role='datepicker']"));
 
+		$("select").selectmenu();
+		$("#jump-control").selectmenu( {
+			    change: function(e, object){
+			        console.log(object.value);
+			        console.log($("." + object.value));
+			        $("html, body").animate({
+			        	scrollTop : $("." + object.value).offset().top - 20
+			        }, 500);
+			  //            $('html, body').animate({
+     //     scrollTop: $("#elementtoScrollToID").offset().top
+     // }, 2000);
+
+			    }
+			}
+		);
+
+		
+
 		$("#basic-info").delegate("a.fade-toggle", "click", function(e) {
 			e.preventDefault();
 			var $el = $(this);
