@@ -88,28 +88,37 @@
 .story-page .media {
   margin-bottom: 15px;
 }
-/* line 49, ../sass/story.scss */
+/* line 41, ../sass/story.scss */
+.story-page .story-video {
+  margin-bottom: 25px;
+}
+/* line 46, ../sass/story.scss */
+.story-page .story-map #story-map {
+  height: 290px;
+}
+/* line 52, ../sass/story.scss */
 .story-page .story-details {
   border-top: 1px dotted #cccccc;
   margin-top: 10px;
   padding-top: 10px;
 }
-/* line 53, ../sass/story.scss */
+/* line 56, ../sass/story.scss */
 .story-page .story-details p {
   margin: 13px 0;
 }
-/* line 58, ../sass/story.scss */
+/* line 61, ../sass/story.scss */
 .story-page .subheader.stripes {
   margin-bottom: 15px;
   line-height: 16px;
+  margin-top: 20px;
 }
-/* line 65, ../sass/story.scss */
+/* line 69, ../sass/story.scss */
 .story-page .memories-container,
 .story-page .q-a-container,
 .story-page .top-5-container {
   margin: 10px 0 20px;
 }
-/* line 70, ../sass/story.scss */
+/* line 74, ../sass/story.scss */
 .story-page .memories-container ul {
   zoom: 1;
 }
@@ -122,7 +131,7 @@
 .story-page .memories-container ul:after {
   clear: both;
 }
-/* line 72, ../sass/story.scss */
+/* line 76, ../sass/story.scss */
 .story-page .memories-container ul li {
   float: left;
   width: 160px;
@@ -131,27 +140,27 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-/* line 77, ../sass/story.scss */
+/* line 81, ../sass/story.scss */
 .story-page .memories-container ul li:hover {
   background: url(../../images/bg-stripe-orange.png) top left repeat;
 }
-/* line 81, ../sass/story.scss */
+/* line 85, ../sass/story.scss */
 .story-page .memories-container ul a {
   display: block;
   color: #020202;
 }
-/* line 84, ../sass/story.scss */
+/* line 88, ../sass/story.scss */
 .story-page .memories-container ul a:hover {
   text-decoration: none;
 }
-/* line 88, ../sass/story.scss */
+/* line 92, ../sass/story.scss */
 .story-page .memories-container ul h6 {
   color: #020202;
   font-size: 16px;
   line-height: 25px;
   margin: 8px 0;
 }
-/* line 94, ../sass/story.scss */
+/* line 98, ../sass/story.scss */
 .story-page .memories-container ul span {
   display: block;
   font-size: 12px;
@@ -159,15 +168,15 @@
   line-height: 18px;
   padding-left: 18px;
 }
-/* line 100, ../sass/story.scss */
+/* line 104, ../sass/story.scss */
 .story-page .memories-container ul span.memories-location {
   background: url(../../images/icon-memory-location.png) left center no-repeat;
 }
-/* line 103, ../sass/story.scss */
+/* line 107, ../sass/story.scss */
 .story-page .memories-container ul span.memories-date {
   background: url(../../images/icon-memory-date.png) left center no-repeat;
 }
-/* line 110, ../sass/story.scss */
+/* line 114, ../sass/story.scss */
 .story-page .q-a-container ul li {
   zoom: 1;
   line-height: 20px;
@@ -182,7 +191,7 @@
 .story-page .q-a-container ul li:after {
   clear: both;
 }
-/* line 114, ../sass/story.scss */
+/* line 118, ../sass/story.scss */
 .story-page .q-a-container ul li h6 {
   width: 200px;
   padding: 0 5px;
@@ -193,14 +202,14 @@
   color: #020202;
   font-size: 14px;
 }
-/* line 122, ../sass/story.scss */
+/* line 126, ../sass/story.scss */
 .story-page .q-a-container ul li p {
   width: 440px;
   padding: 0 5px;
   float: left;
   margin: 0;
 }
-/* line 128, ../sass/story.scss */
+/* line 132, ../sass/story.scss */
 .story-page .top-5-container {
   zoom: 1;
 }
@@ -213,7 +222,7 @@
 .story-page .top-5-container:after {
   clear: both;
 }
-/* line 130, ../sass/story.scss */
+/* line 134, ../sass/story.scss */
 .story-page .top-5-container .top-5 {
   width: 320px;
   padding: 0 5px;
@@ -221,7 +230,7 @@
   padding: 10px;
   margin-bottom: 10px;
 }
-/* line 134, ../sass/story.scss */
+/* line 138, ../sass/story.scss */
 .story-page .top-5-container .top-5 .top-5-innner-wrapper {
   zoom: 1;
 }
@@ -234,25 +243,25 @@
 .story-page .top-5-container .top-5 .top-5-innner-wrapper:after {
   clear: both;
 }
-/* line 137, ../sass/story.scss */
+/* line 141, ../sass/story.scss */
 .story-page .top-5-container .top-5 h5 {
   color: #020202;
   font-size: 17px;
   margin-bottom: 10px;
 }
-/* line 142, ../sass/story.scss */
+/* line 146, ../sass/story.scss */
 .story-page .top-5-container .top-5 span {
   float: left;
   width: 100px;
 }
-/* line 146, ../sass/story.scss */
+/* line 150, ../sass/story.scss */
 .story-page .top-5-container .top-5 ul {
   float: right;
   width: 180px;
   font-size: 12px;
   line-height: 18px;
 }
-/* line 152, ../sass/story.scss */
+/* line 156, ../sass/story.scss */
 .story-page .top-5-container .top-5 a {
   clear: right;
   float: right;
@@ -261,16 +270,16 @@
   width: 180px;
   line-height: 18px;
 }
-/* line 161, ../sass/story.scss */
+/* line 165, ../sass/story.scss */
 .story-page .top-5-container a {
   color: #e33237;
   font-size: 12px;
 }
-/* line 169, ../sass/story.scss */
+/* line 173, ../sass/story.scss */
 .story-page .recent-stories li {
   margin-bottom: 15px;
 }
-/* line 171, ../sass/story.scss */
+/* line 175, ../sass/story.scss */
 .story-page .recent-stories li a {
   display: table;
   width: 100%;
@@ -278,49 +287,49 @@
   overflow: hidden;
   text-decoration: none;
 }
-/* line 177, ../sass/story.scss */
+/* line 181, ../sass/story.scss */
 .story-page .recent-stories li a:hover {
   background-image: url(../../images/bg-stripe-orange.png);
   background-position: top left;
   background-repeat: repeat;
 }
-/* line 182, ../sass/story.scss */
+/* line 186, ../sass/story.scss */
 .story-page .recent-stories li a .recent-story-img {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 186, ../sass/story.scss */
+/* line 190, ../sass/story.scss */
 .story-page .recent-stories li a:hover .recent-story-info {
   background: url(../../images/bg-quote-white.png) 95% center no-repeat;
 }
-/* line 189, ../sass/story.scss */
+/* line 193, ../sass/story.scss */
 .story-page .recent-stories li a .recent-story-info {
   display: table-cell;
   vertical-align: middle;
   line-height: 24px;
   background: url(../../images/bg-quote-grey.png) 95% center no-repeat;
 }
-/* line 194, ../sass/story.scss */
+/* line 198, ../sass/story.scss */
 .story-page .recent-stories li a .recent-story-info h5 {
   color: #e33237;
   font-size: 21px;
 }
-/* line 198, ../sass/story.scss */
+/* line 202, ../sass/story.scss */
 .story-page .recent-stories li a .recent-story-info p {
   color: #020202;
   font-size: 17px;
 }
-/* line 202, ../sass/story.scss */
+/* line 206, ../sass/story.scss */
 .story-page .recent-stories li a .recent-story-info .recent-story-follow {
   color: #e33237;
   font-size: 12px;
 }
-/* line 209, ../sass/story.scss */
+/* line 213, ../sass/story.scss */
 .story-page .recent-stories a {
   color: #e33237;
   font-size: 12px;
 }
-/* line 212, ../sass/story.scss */
+/* line 216, ../sass/story.scss */
 .story-page .recent-stories a.all-stories {
   color: #ff6917;
   padding-left: 10px;

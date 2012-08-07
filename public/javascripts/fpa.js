@@ -1,6 +1,7 @@
 var FPA = {
 	common : {},
-	basicForm : {}
+	basicForm : {},
+	story:{}
 };
 
 (function() {
@@ -8,6 +9,65 @@ var FPA = {
 		$els.datepicker();
 		return $els;
 	};	
+
+	FPA.story.map = function(markersArray) {
+
+		function getCenter(coords) {
+			return new google.maps.LatLng(20.000000, -10.000000);
+		}
+
+		var mapStyle = [
+		  {
+		    featureType: 'road',
+		    stylers: [
+		      {visibility: 'off'}
+		    ]
+		  }  		
+	    ];	
+
+	    var customMapConfig = new google.maps.StyledMapType(mapStyle, {name : "FPA Styled Map"});
+
+        var mapOptions = {
+          zoom: 1,
+          mapTypeControlOptions: {
+          	mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+          },
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          streetViewControl: false,
+          panControl: true,
+          mapTypeControl: false
+        };
+
+        var map = new google.maps.Map($("#story-map")[0], mapOptions);
+
+		map.mapTypes.set('map_style', customMapConfig);
+		map.setMapTypeId('map_style');  
+
+		var coords = [];
+
+		for (var i = 0, l = markersArray.length; i < l; i++) {
+			coords.push(new google.maps.LatLng(markersArray[i].lat, markersArray[i].lng));
+			new google.maps.Marker({
+				position: coords[i],
+				map: map,
+				title: markersArray[i].title,
+				icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png"
+			});
+		}
+
+		var familyHistoryPath = new google.maps.Polyline({
+			path: coords,
+			strokeColor: "#5a68ec",
+			strokeOpacity: 1.0,
+			strokeWeight: 3
+		});
+
+		familyHistoryPath.setMap(map);
+
+		map.setCenter(getCenter(coords));
+
+
+	}
 
 	var basicInfoForm = function() {
 		var $form = $("#basic-info");
@@ -115,6 +175,20 @@ var FPA = {
 	$(document).ready(function() {
 		//basic information form
 		FPA.common.datepicker($(".history-info input[data-role='datepicker']"));
+		
+		FPA.story.map([{
+			lat: -25.363882,
+			lng: 131.044922,
+			title: "A place"
+		}, {
+			lat: -22.363882,
+			lng: 116.044922,
+			title: "A place"
+		}, {
+			lat: 40.69119,
+			lng: -73.970947,
+			title: "New York!!!"
+		}]);
 
 		$("select").selectmenu();
 		$("#jump-control").selectmenu( {
@@ -122,17 +196,12 @@ var FPA = {
 			        console.log(object.value);
 			        console.log($("." + object.value));
 			        $("html, body").animate({
-			        	scrollTop : $("." + object.value).offset().top - 20
+			        	scrollTop : $("." + object.value).offset().top
 			        }, 500);
-			  //            $('html, body').animate({
-     //     scrollTop: $("#elementtoScrollToID").offset().top
-     // }, 2000);
-
 			    }
 			}
-		);
+		);      
 
-		
 
 		$("#basic-info").delegate("a.fade-toggle", "click", function(e) {
 			e.preventDefault();

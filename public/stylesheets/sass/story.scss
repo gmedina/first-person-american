@@ -39,10 +39,13 @@
 	}
 
 	.story-video {
-		
+		margin-bottom: 25px;
 	}
 
 	.story-map {
+		#story-map {
+			height: 290px;
+		}
 
 	}
 
@@ -58,6 +61,7 @@
 	.subheader.stripes {
 		margin-bottom: 15px;
 		line-height: 16px;
+		margin-top: 20px;
 	}
 
 	.memories-container, 
