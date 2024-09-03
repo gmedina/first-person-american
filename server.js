@@ -8,7 +8,7 @@ http.createServer(function(request, response) {
 
   var uri = url.parse(request.url).pathname
     , filename = path.join(process.cwd(), uri);
-  
+
   path.exists(filename, function(exists) {
     if(!exists) {
       response.writeHead(404, {"Content-Type": "text/plain"});
@@ -21,7 +21,7 @@ http.createServer(function(request, response) {
 
     fs.readFile(filename, "binary", function(err, file) {
       var contentType = ""
-      if(err) {        
+      if(err) {
         response.writeHead(500, {"Content-Type": "text/plain"});
         response.write(err + "\n");
         response.end();
@@ -33,7 +33,7 @@ http.createServer(function(request, response) {
       }
       else if(filename.indexOf('.js') != -1) {
         contentType = {"Content-Type" : "application/x-javascript"};
-      } 
+      }
       else if(filename.indexOf('.html') != -1) {
         contentType = {"Content-Type" : "text/html"};
       }
@@ -42,7 +42,7 @@ http.createServer(function(request, response) {
       }
 
       console.log(filename);
-      console.log(contentType); 
+      console.log(contentType);
       response.writeHead(200, contentType);
       response.write(file, "binary");
       response.end();
